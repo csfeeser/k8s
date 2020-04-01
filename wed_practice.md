@@ -8,7 +8,12 @@
     <details><summary>Lab that contains the answer</summary>
     See Lab 03
     </details>
-0. Create a context named *challenge-context* that uses the following: *challenge* namespace.
+0. Create a context named *challenge-context* that uses the following:
+
+        cluster: kubernetes-the-alta3-way
+        namespace: challenge
+        user: admin
+
     <details><summary>Lab that contains the answer</summary>
     See Lab 04
     </details>
