@@ -1,4 +1,4 @@
-# Wednesday End-Of-Day Challenge
+# Tuesday End-Of-Day Challenge
 
 ### Procedure
 >The following are questions as they may appear on the CKAD exam! If you're looking for an authentic experience, you may ONLY use https://kubernetes.io/docs/home/ when you must look anything up (this is the only resource you have on the exam). Otherwise, the labs that specify how to complete each step is included. GOOD LUCK!
