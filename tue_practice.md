@@ -27,6 +27,7 @@
     <details><summary>Lab that contains the answer</summary>
     See Labs 06 & 07
     </details>
+0. BONUS: output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
 0. Convert your Pod into a Deployment with 5 replicas.
     <br>
     <details><summary>Lab that contains the answer</summary>
