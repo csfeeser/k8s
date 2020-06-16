@@ -48,7 +48,7 @@
 
         kubernetes: is
         super: easy
-        I: am
+        i: am
         so: awesome
 
     <br>
