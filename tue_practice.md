@@ -17,6 +17,12 @@
     <details><summary>Lab that contains the answer</summary>
     See Lab 05
     </details>
+0. Make *challenge-context* your current context.
+    <br>
+    <details><summary>Lab that contains the answer</summary>
+    See Lab 05
+    </details>   
+
 0. Create a single container pod from a pod manifest. Use your *webby* image.
     <br>
     <details><summary>Lab that contains the answer</summary>
