@@ -15,17 +15,17 @@
         user: admin
 
     <details><summary>Lab that contains the answer</summary>
-    See Lab 04
+    See Lab 05
     </details>
 0. Create a single container pod from a pod manifest. Use your *webby* image.
     <br>
     <details><summary>Lab that contains the answer</summary>
-    See Lab 07
+    See Lab 08
     </details>
 0. Inspect the pod using the `get` and `describe` commands.
     <br>
     <details><summary>Lab that contains the answer</summary>
-    See Labs 05 & 06
+    See Labs 06 & 07
     </details>
 0. Convert your Pod into a Deployment with 5 replicas.
     <br>
@@ -35,7 +35,7 @@
 0. Label your Deployment as *challenge: met*.
     <br>
     <details><summary>Lab that contains the answer</summary>
-    See Lab 19
+    See Lab 12
     </details>
 0. Annotate your Deployment with the following:
 
@@ -46,7 +46,7 @@
 
     <br>
     <details><summary>Lab that contains the answer</summary>
-    See Lab 20
+    See Lab 13
     </details>
 0. Scale your Deployment down to 2 replicas.
     <br>
