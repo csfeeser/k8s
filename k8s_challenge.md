@@ -60,3 +60,7 @@
     <details><summary>Lab that contains the answer</summary>
     See Lab 18
     </details>
+
+## When you are finished, return to the correct context!
+
+`student@k8s-000-bchd:~$` `kubectl config use-context kubernetes-the-alta3-way`
