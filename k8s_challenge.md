@@ -17,7 +17,7 @@
     <details><summary>Lab that contains the answer</summary>
     See Lab 05
     </details>
-0. Make *challenge-context* your current context.
+0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
     <br>
     <details><summary>Lab that contains the answer</summary>
     See Lab 05
@@ -34,33 +34,24 @@
     See Labs 06 & 07
     </details>
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
-0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest with 5 replicas. Create the deployment!
-    <br>
-    <details><summary>Lab that contains the answer</summary>
-    See Lab 16
-    </details>
-0. Label your Deployment as *challenge: met*.
-    <br>
-    <details><summary>Lab that contains the answer</summary>
-    See Lab 12
-    </details>
-0. Annotate your Deployment with the following:
-
+0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest. Your manifest should do the following:
+  - Create 4 replicas.
+  - All pods created by this manifest should be scheduled on node-3.
+  - Label the **deployment** with the label *challenge: met*.
+  - Annotate the **deployment** with the following:
         kubernetes: is
         super: easy
         i: am
         so: awesome
-
     <br>
-    <details><summary>Lab that contains the answer</summary>
-    See Lab 13
+    <details><summary>Labs that contains the answer</summary>
+    See Labs 12, 13, and 16
     </details>
-0. Scale your Deployment down to 2 replicas.
-    <br>
+0. Expose your deployment with a ClusterIP service.
     <details><summary>Lab that contains the answer</summary>
-    See Lab 18
+    See Lab 30
     </details>
-
+    
 ## When you are finished, return to the correct context!
 
 `student@k8s-000-bchd:~$` `kubectl config use-context kubernetes-the-alta3-way`
