@@ -39,7 +39,7 @@
     kubectl describe pod challengepod > ~/home/student/static/poddesc.txt
     </details>
 
-0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment should must:
+0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment must:
     - Be named *challengedeploy*
     - Create 4 replicas.
     - Always be created with the latest version of *nginx*.
