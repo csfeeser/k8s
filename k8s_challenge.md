@@ -34,8 +34,9 @@
     See Labs 06 & 07
     </details>
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
-0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest. Your manifest should do the following:
+0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment should must:
     - Create 4 replicas.
+    - Always be created with the latest version of *nginx*.
     - All pods created by this manifest should be scheduled on node-3.
     - Label the **deployment** with the label *challenge: met*.
     - Annotate the **deployment** with the following:
