@@ -23,7 +23,7 @@
     See Lab 05
     </details>   
 
-0. Create a single container pod from a pod manifest. Use an nginx image, version 1.7.9.
+0. Create a single container pod from a pod manifest named *challengepod*. Use an nginx image, version 1.7.9.
     <br>
     <details><summary>Lab that contains the answer</summary>
     See Lab 08
@@ -34,7 +34,13 @@
     See Labs 06 & 07
     </details>
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
+    <br>
+    <details><summary>How to do this</summary>
+    kubectl describe pod challengepod > ~/home/student/static/poddesc.txt
+    </details>
+
 0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment should must:
+    - Be named *challengedeploy*
     - Create 4 replicas.
     - Always be created with the latest version of *nginx*.
     - All pods created by this manifest should be scheduled on node-3.
