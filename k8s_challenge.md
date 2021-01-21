@@ -35,14 +35,16 @@
     </details>
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
 0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest. Your manifest should do the following:
-  - Create 4 replicas.
-  - All pods created by this manifest should be scheduled on node-3.
-  - Label the **deployment** with the label *challenge: met*.
-  - Annotate the **deployment** with the following:
-        kubernetes: is
-        super: easy
-        i: am
-        so: awesome
+    - Create 4 replicas.
+    - All pods created by this manifest should be scheduled on node-3.
+    - Label the **deployment** with the label *challenge: met*.
+    - Annotate the **deployment** with the following:
+    
+          kubernetes: is
+          super: easy
+          i: am
+          so: awesome
+          
     <br>
     <details><summary>Labs that contains the answer</summary>
     See Labs 12, 13, and 16
