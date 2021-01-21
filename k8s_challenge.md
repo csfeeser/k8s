@@ -36,7 +36,9 @@
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
     <br>
     <details><summary>How to do this</summary>
+    
     `kubectl describe pod challengepod > ~/home/student/static/poddesc.txt`
+    
     </details>
 
 0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment must:
