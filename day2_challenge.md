@@ -61,14 +61,14 @@
 
 0. Create a user named 'tony', who is a developer, with the following permissions:
 
-In the namespace "development", tony can:
+    In the namespace "development", tony can:
 
-- [pods, secrets, configmaps] - get, list, watch, create, apply, describe
-- [deployments] - get, list, watch, create, apply, describe
+    - [pods, secrets, configmaps] - get, list, watch, create, apply, describe
+    - [deployments] - get, list, watch, create, apply, describe
 
-In all namespaces, tony can:
+    In all namespaces, tony can:
 
-- [pods] - get, list, watch, describe
+    - [pods] - get, list, watch, describe
 
 ## When you are finished, return to the correct context!
 
