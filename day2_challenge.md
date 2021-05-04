@@ -58,7 +58,18 @@
     `kubectl describe pod challengepod > ~/home/student/static/poddesc.txt`
     
     </details>
-    
+
+0. Create a user named 'tony', who is a developer, with the following permissions:
+
+In the namespace "development", tony can:
+
+- [pods, secrets, configmaps] - get, list, watch, create, apply, describe
+- [deployments] - get, list, watch, create, apply, describe
+
+In all namespaces, tony can:
+
+- [pods] - get, list, watch, describe
+
 ## When you are finished, return to the correct context!
 
 `student@k8s-000-bchd:~$` `kubectl config use-context kubernetes-the-alta3-way`
