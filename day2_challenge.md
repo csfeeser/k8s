@@ -61,7 +61,7 @@
 
 0. Create a user named 'tony', who is a developer, with the following permissions:
 
-    In the namespace "development", tony can:
+    In the namespace "challenge", tony can:
 
     - [pods, secrets, configmaps] - get, list, watch, create, apply, describe
     - [deployments] - get, list, watch, create, apply, describe
