@@ -31,7 +31,7 @@
     See Lab 12
     </details>   
 
-0. Create a single container pod named *challengepod*. Use an nginx image, version 1.7.9.
+0. Create a single container pod named *challengepod*. Use an nginx image, version 1.19.6.
     <br>
     <details><summary>Lab that contains the answer</summary>
     See Lab 16
