@@ -51,11 +51,11 @@
     See Labs 14 and 15
     </details>
     
-0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
+0. Output your pod description into a file named `poddesc.txt`. Save it to `~/static/`.
     <br>
     <details><summary>How to do this</summary>
     
-    `kubectl describe pod challengepod > ~/home/student/static/poddesc.txt`
+    `kubectl describe pod challengepod > ~/static/poddesc.txt`
     
     </details>
 
