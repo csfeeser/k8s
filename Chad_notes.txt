@@ -1,0 +1,15 @@
+DOCKER COMMANDS AND WHAT THEY DO:
+
+docker ps <-- list out all Docker created containers (this won't have any effect on containers made in a K8s cluster)
+
+docker build <-- create an image using the specified Dockerfile
+
+                            ╲╱ container port
+sudo docker run -d -p 2345:5000 registry:2 <-- name of image
+            ^         ^ local port
+            |create container
+
+docker tag <-- assign an image a tag, which is used to identify the registry it belongs to
+
+docker push <-- push an image into a registry
+
