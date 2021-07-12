@@ -1,0 +1,555 @@
+from heather.e.ogilvie to everyone:    8:27 AM
+Hi Chad, I'm a 0
+from Chad Feeser to everyone:    8:28 AM
+Hi Heather! no worries, we'll be starting there :)
+from Roger Baker to everyone:    8:28 AM
+good morning - I'm a zero - i even have trouble spelling it 
+from Chad Feeser to everyone:    8:28 AM
+@Roger hahaha! that's why most people just write it as "k8s" :)
+from Roger Baker to everyone:    8:29 AM
+learning already ! thx 
+from Philip A. Chan to everyone:    8:29 AM
+Hello Chad and everyone - I am also a 0.
+from Roger Baker to everyone:    8:32 AM
+sounds good
+from Aman to everyone:    8:32 AM
+Yep
+
+from Hitesh Kumar Dhuria to everyone:    8:35 AM
+3
+from Aman to everyone:    8:35 AM
+Level of exp : 3
+from poonam.rane to everyone:    8:35 AM
+iplemented on Openshift
+from robert.l.careathers to everyone:    8:35 AM
+2
+from ramon.brooker to everyone:    8:35 AM
+lots of docker and lxc etc
+from ramon.brooker to everyone:    8:35 AM
+4
+from dami.oti to everyone:    8:36 AM
+7
+from Ram to everyone:    8:36 AM
+1
+from ramon.brooker to everyone:    8:36 AM
+I haven't used it for about 5 years 
+from Siva Shanmugadurai to everyone:    8:36 AM
+1
+from Chad Feeser to everyone:    8:37 AM
+https://www.cncf.io/certification/ckad/
+from poonam.rane to everyone:    8:38 AM
+Is it for beginners ?
+from poonam.rane to everyone:    8:38 AM
+Thankyou 
+from Chad Feeser to everyone:    8:39 AM
+https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_V1.21.pdf
+from Siva Shanmugadurai to everyone:    8:41 AM
+Does this traniing will be helpful to go for CKA exam?
+from ramon.brooker to everyone:    8:42 AM
+should I be able to take the CKA after this course ? 
+from Chad Feeser to everyone:    8:46 AM
+https://live.alta3.com/groups/fluffy-gazelles-assembled/dashboard
+from ramon.brooker to everyone:    8:49 AM
+That's the one I was actually talking about  :) 
+from ramon.brooker to everyone:    8:51 AM
+I presume we can drop in our personal tmux config? 
+from ramon.brooker to everyone:    8:51 AM
+I've been using Linux since ~98 
+from ramon.brooker to everyone:    8:56 AM
+how long will be have access to this after this class? 
+from ramon.brooker to everyone:    8:59 AM
+FYI don't type: exit in the tmux term 
+from ramon.brooker to everyone:    8:59 AM
+and tty doesn't allow you to restart it 
+from ramon.brooker to everyone:    8:59 AM
+didn
+from ramon.brooker to everyone:    8:59 AM
+didn't work 
+from ramon.brooker to everyone:    8:59 AM
+nope
+from Siva Shanmugadurai to everyone:    9:02 AM
+what is exactly tmux ...sorry for asking some basic questions 
+from poonam.rane to everyone:    9:03 AM
+where do we get to learn on these commands you typing? 
+from poonam.rane to everyone:    9:04 AM
+ok !
+from Hitesh Kumar Dhuria to everyone:    9:10 AM
+yes
+from Aman to everyone:    9:10 AM
+Medium familiarity
+from dami.oti to everyone:    9:10 AM
+yes
+from Brodie Reuter to everyone:    9:11 AM
+Yes
+from robert.l.careathers to everyone:    9:11 AM
+some
+from irfan.a.hussain to everyone:    9:11 AM
+RAML 
+from poonam.rane to everyone:    9:11 AM
+Configuration files? 
+from Palani Solai to everyone:    9:11 AM
+medium
+from ramon.brooker to everyone:    9:11 AM
+Yet Another Mark Up Language 
+from Ram to everyone:    9:11 AM
+No, i am ready to grab :)
+from poonam.rane to everyone:    9:16 AM
+how do you dteremine how many masters you need?
+from Ram to everyone:    9:18 AM
+Why not even number of masters ? 
+from ramon.brooker to everyone:    9:20 AM
+is it etcd that controls the master election ? 
+from ramon.brooker to everyone:    9:20 AM
+raft 
+from ramon.brooker to everyone:    9:29 AM
+CAP 
+from ramon.brooker to everyone:    9:34 AM
+what is the new container support? since they droped Docker ? 
+from ramon.brooker to everyone:    9:34 AM
+is it Podman ? 
+from poonam.rane to everyone:    9:37 AM
+Is docker same as K8.. its quiet confusing
+from ramon.brooker to everyone:    9:37 AM
+yes, thank you
+from poonam.rane to everyone:    9:37 AM
+sorry if you answwered
+from ramon.brooker to everyone:    9:37 AM
+BSD Jails 
+from ramon.brooker to everyone:    9:40 AM
+is Docker still using AUFS? or at least using layered FS? 
+from ramon.brooker to everyone:    9:42 AM
+are Heroku's Dynos containers? 
+from ramon.brooker to everyone:    9:43 AM
+does containerd use layers? 
+from ramon.brooker to everyone:    9:44 AM
+now worries, 
+from ramon.brooker to everyone:    9:45 AM
+sorry for all the questions eveyone 
+from Chad Feeser to everyone:    9:55 AM
+AUFS is not deprecated yet, and is still hanging around on Ubuntu systems with a linux kernel version less than v4.0... but any more recent than that overlay2 is the recommended course
+from Chad Feeser to everyone:    9:55 AM
+https://docs.docker.com/storage/storagedriver/aufs-driver/
+from Chad Feeser to everyone:    9:55 AM
+https://docs.docker.com/storage/storagedriver/overlayfs-driver/
+from ramon.brooker to everyone:    9:56 AM
+is Overlay2 supported in the Kernel ? or is Linus still anti user space? 
+from Chad Feeser to everyone:    9:58 AM
+it appears that it is supported
+from Chad Feeser to everyone:    10:05 AM
+2. Using vim
+from ramon.brooker to everyone:    10:05 AM
+you can use vimtutor 
+from ramon.brooker to everyone:    10:05 AM
+it comes instlled by default 
+from poonam.rane to everyone:    10:10 AM
+did you type in those #?
+from ramon.brooker to everyone:    10:11 AM
+/ to search 
+from Chad Feeser to everyone:    10:13 AM
+3. Efficient CLI Usage with Tmux
+from poonam.rane to everyone:    10:15 AM
+i am unable to exit to command line
+from Chad Feeser to everyone:    10:15 AM
+press esc
+from Chad Feeser to everyone:    10:15 AM
+type :q!
+from poonam.rane to everyone:    10:15 AM
+got it
+from poonam.rane to everyone:    10:15 AM
+thanks
+from Ram to everyone:    10:16 AM
+how to save in vim editor ?
+from irfan.a.hussain to everyone:    10:16 AM
+not able to do ctrl b and shift for split
+from Chad Feeser to everyone:    10:17 AM
+:w <-- saves without quitting
+from Chad Feeser to everyone:    10:17 AM
+:wq <-- saves and then quits
+from poonam.rane to everyone:    10:18 AM
+works
+from irfan.a.hussain to everyone:    10:18 AM
+it worked Thanks
+from Ram to everyone:    10:19 AM
+how do i maxiuize this window ?
+from Ram to everyone:    10:19 AM
+yes
+from Ram to everyone:    10:19 AM
+thx
+from irfan.a.hussain to everyone:    10:20 AM
+how to get into tmux windows 
+from irfan.a.hussain to everyone:    10:20 AM
+yes 
+from irfan.a.hussain to everyone:    10:21 AM
+kool 
+from irfan.a.hussain to everyone:    10:21 AM
+hanks 
+from irfan.a.hussain to everyone:    10:21 AM
+Thanks*
+from Chad Feeser to everyone:    10:22 AM
+4. Creating a Docker Image
+from Chad Feeser to everyone:    10:24 AM
+app > Dockerfile > image > container
+Dockerfile -- a set of instructions of how an app should be made into an image!
+image -- a blueprint that can be used to spawn identical containers
+from poonam.rane to everyone:    10:27 AM
+how do you paste back on the command line?
+from Chad Feeser to everyone:    10:27 AM
+ctrl shift v
+from Chad Feeser to everyone:    10:27 AM
+OR
+from Chad Feeser to everyone:    10:27 AM
+shift insert
+from ramon.brooker to everyone:    10:32 AM
+did you mirror to a local 
+from Siva Shanmugadurai to everyone:    10:45 AM
+Chad..I got stucket in GO script..step:17
+from Siva Shanmugadurai to everyone:    10:46 AM
+Can you please help
+from Siva Shanmugadurai to everyone:    10:46 AM
+*stuck 
+
+from Siva Shanmugadurai to everyone:    10:48 AM
+thank you 
+from Chad Feeser to everyone:    10:48 AM
+you're welcome!
+from poonam.rane to everyone:    10:49 AM
+Challenge 01 not working
+from poonam.rane to everyone:    10:49 AM
+getting an error go command not found
+from Chad Feeser to everyone:    10:49 AM
+on my way
+from Aman to everyone:    10:50 AM
+What's the purpose of "go get ." in step 26? What dependencies are we getting for the webby repo? 
+from poonam.rane to everyone:    10:51 AM
+what was wrong.. coulndt understand
+
+from Roger Baker to everyone:    10:56 AM
+done
+from poonam.rane to everyone:    10:57 AM
+in VIm scratch 
+from poonam.rane to everyone:    10:57 AM
+copy paste and :wq? 
+from poonam.rane to everyone:    10:57 AM
+to save?
+from Ram to everyone:    10:57 AM
+hi, I am stuck in step 33 and it does not show the command prompt
+from Chad Feeser to everyone:    10:57 AM
+@Poonam on step 30? yes that's correct!
+
+from Chad Feeser to everyone:    10:58 AM
+hi Ram, let me come have a look
+
+from Ram to everyone:    10:59 AM
+ok thanks
+from Hitesh Kumar Dhuria to everyone:    11:00 AM
+done
+from Philip A. Chan to everyone:    11:01 AM
+i am done
+from irfan.a.hussain to everyone:    11:02 AM
+we re going till step 48 , correct ?
+from irfan.a.hussain to everyone:    11:02 AM
+Done... till step 48 
+from Aman to everyone:    11:02 AM
+Step 41 now
+from Aman to everyone:    11:04 AM
+Finished 48
+from Ram to everyone:    11:05 AM
+how to get back to the command line ?
+from Chad Feeser to everyone:    11:05 AM
+press esc
+from Chad Feeser to everyone:    11:05 AM
+type :wq!    then hit enter
+from Palani Solai to everyone:    11:06 AM
+My lab link got disconnected, can you please post the lab URL?
+from Hitesh Kumar Dhuria to everyone:    11:06 AM
+https://live.alta3.com/groups/fluffy-gazelles-assembled/your-content
+from Palani Solai to everyone:    11:07 AM
+Thanks
+from Chad Feeser to everyone:    11:07 AM
+https://live.alta3.com/groups/fluffy-gazelles-assembled/dashboard
+from Chad Feeser to everyone:    11:08 AM
+please be sure to run steps 41-43 in lab 5
+from Chad Feeser to everyone:    11:08 AM
+please be sure to run steps 41-43 in lab *4
+from Chad Feeser to everyone:    11:08 AM
+5. Deploy Kubernetes using Ansible
+
+from Chad Feeser to everyone:    11:23 AM
+Before you go on break:
+Lab 4:
+• Complete steps 41-43
+Lab 5:
+• Complete steps 1-3
+
+from Chad Feeser to everyone:    11:28 AM
+https://github.com/csfeeser/k8s/blob/master/Chad_notes.txt
+from Chad Feeser to everyone:    11:28 AM
+I'll push any notepad demos I write to that GitHub link for anyone who is interested
+from Ram to everyone:    11:31 AM
+Thanks a lot. These notepads are very helpful.
+from Chad Feeser to everyone:    11:31 AM
+you're very welcome!
+from Chad Feeser to everyone:    11:34 AM
+kubectl get nodes
+from ramon.brooker to everyone:    11:35 AM
+why are there more in fping 
+from irfan.a.hussain to everyone:    11:36 AM
+sorry , this is about lab 5 ? 
+from ramon.brooker to everyone:    11:37 AM
+why is ansible no longer available ? 
+from Chad Feeser to everyone:    11:37 AM
+5. Deploy Kubernetes using Ansible
+from ramon.brooker to everyone:    11:37 AM
+I no longer have ansible 
+from ramon.brooker to everyone:    11:37 AM
+ ansible-playbook -i node-hosts.txt containerd_upd│
+ate.yaml                                                         │Search the Docker Hub for images
+                                                                 │student@bchd:~$ sudo docker search brooker bchd.registry
+Command 'ansible-playbook' not found, but can be installed with: │"docker search" requires exactly 1 argument.
+                                                                 │See 'docker search --help'.
+apt install ansible                                              │
+Please ask your administrator.                                   │Usage:  docker search [OPTIONS] TERM
+                                 
+from irfan.a.hussain to everyone:    11:41 AM
+so we should get on completing lab 5 now 
+from irfan.a.hussain to everyone:    11:41 AM
+thanks 
+from irfan.a.hussain to everyone:    11:41 AM
+will wait
+from Chad Feeser to everyone:    11:46 AM
+Please finish Lab 5. Deploy Kubernetes using Ansible
+from Hitesh Kumar Dhuria to everyone:    11:46 AM
+done.
+from Aman to everyone:    11:47 AM
+Finshed lab 5
+from poonam.rane to everyone:    11:48 AM
+sorry had to drop off for a call 
+from irfan.a.hussain to everyone:    11:48 AM
+for lab 4 i had about 4 tmux windows, should I referesh my browser to quit em all ?
+from poonam.rane to everyone:    11:48 AM
+i am stuck in serving mode 
+from poonam.rane to everyone:    11:48 AM
+want to start lab 5
+from irfan.a.hussain to everyone:    11:48 AM
+ok thanks, are we going to need those later ?
+from poonam.rane to everyone:    11:48 AM
+thanks
+from irfan.a.hussain to everyone:    11:49 AM
+I am still running  webby, so should it be terminated ?
+from irfan.a.hussain to everyone:    11:49 AM
+kool thanks 
+from irfan.a.hussain to everyone:    11:50 AM
+what is correspondng clr commad for tmux
+from irfan.a.hussain to everyone:    11:51 AM
+CLR 
+from Chad Feeser to everyone:    11:51 AM
+clear
+from Chad Feeser to everyone:    11:51 AM
+or press ctrl l
+from irfan.a.hussain to everyone:    11:51 AM
+I see thanks 
+from ramon.brooker to everyone:    11:57 AM
+k8s ismn'
+from Jason Trespel to everyone:    11:58 AM
+done with lab. 
+from Ram to everyone:    11:58 AM
+Done with lab
+
+from poonam.rane to everyone:    12:00 PM
+hello Chad, stuck in step 16
+from poonam.rane to everyone:    12:00 PM
+seeing some fatal errors
+from Chad Feeser to everyone:    12:03 PM
+all fixed!
+from irfan.a.hussain to everyone:    12:05 PM
+Lab 5 completed.
+from Palani Solai to everyone:    12:08 PM
+Hi Chad, I am getting this error in step 16
+from Palani Solai to everyone:    12:08 PM
+TASK [command] *******************************************
+**********************                                    
+fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["
+docker", "push", "bchd.registry/alta3-webby"], "delta": "0
+:00:00.052318", "end": "2021-07-12 16:04:15.626603", "msg"
+: "non-zero return code", "rc": 1, "start": "2021-07-12 16
+:04:15.574285", "stderr": "Get https://bchd.registry/v2/: 
+dial tcp 10.6.238.86:443: connect: connection refused", "s
+tderr_lines": ["Get https://bchd.registry/v2/: dial tcp 10
+.6.238.86:443: connect: connection refused"], "stdout": "U
+sing default tag: latest\nThe push refers to repository [b
+chd.registry/alta3-webby]", "stdout_lines": ["Using defaul
+t tag: latest", "The push refers to repository [bchd.regis
+try/alta3-webby]"]}  
+
+from Aman to everyone:    1:33 PM
+LOL
+from Aman to everyone:    1:35 PM
+So bad actors are unable to access the master node in any way in this design? 
+from ramon.brooker to everyone:    1:41 PM
+that pod only  what about replicas 
+from irfan.a.hussain to everyone:    1:42 PM
+Is docker run time also on the Master ?
+
+from irfan.a.hussain to everyone:    1:42 PM
+ok
+from Chad Feeser to everyone:    1:50 PM
+6. Isolating Resources with Kubernetes Namespaces
+
+from Aman to everyone:    2:04 PM
+Finished lab 6
+from Hitesh Kumar Dhuria to everyone:    2:04 PM
+Completed Lab 6
+
+from irfan.a.hussain to everyone:    2:05 PM
+how mdone lab 6 ny Kinds are here in Yaml , suh as Namespace
+from ramon.brooker to everyone:    2:05 PM
+done 
+from irfan.a.hussain to everyone:    2:05 PM
+please disregard*
+from irfan.a.hussain to everyone:    2:05 PM
+Lab 6 is done 
+from Jason Trespel to everyone:    2:06 PM
+all done
+from poonam.rane to everyone:    2:07 PM
+Lab 6 done
+from poonam.rane to everyone:    2:07 PM
+why alllocating resource quota cause issues? 
+from ramon.brooker to everyone:    2:08 PM
+can you combine the resource and namespace creation in one file? 
+from ramon.brooker to everyone:    2:09 PM
+are they all set the same? 
+from ramon.brooker to everyone:    2:09 PM
+like --- \n apiVersion: v1 .. 
+from Philip A. Chan to everyone:    2:09 PM
+all done
+from ramon.brooker to everyone:    2:10 PM
+but the second would be started the same way
+from ramon.brooker to everyone:    2:10 PM
+you can't just declare at the top as apiversion 
+from ramon.brooker to everyone:    2:12 PM
+ok so you need the --- between each stanza 
+
+from Aman to everyone:    2:37 PM
+dev
+from Aman to everyone:    2:38 PM
+admin
+
+from irfan.a.hussain to everyone:    2:54 PM
+done
+from Jason Trespel to everyone:    2:54 PM
+all done
+from poonam.rane to everyone:    2:54 PM
+completed
+from Philip A. Chan to everyone:    2:55 PM
+all done
+from poonam.rane to everyone:    2:55 PM
+HOw do you change the namespace for the context created
+
+from Hitesh Kumar Dhuria to everyone:    2:57 PM
+Done
+
+from poonam.rane to everyone:    3:00 PM
+tried both , getting unexpected arguement error
+from poonam.rane to everyone:    3:00 PM
+kubectl config set-context name=prod-context  namespace=prod
+from poonam.rane to everyone:    3:01 PM
+and kubectl config set-context prod-context  namespace=prod
+
+from poonam.rane to everyone:    3:03 PM
+thx
+from Roger Baker to everyone:    3:04 PM
+si you don';t forget 
+from Jason Trespel to everyone:    3:04 PM
+If I didn't do it first I would forget.
+from Aman to everyone:    3:05 PM
+access control might be tied to contexts? 
+from Ram to everyone:    3:05 PM
+pod willl not be created in the right cluster
+from Aman to everyone:    3:11 PM
+3
+from Jason Trespel to everyone:    3:11 PM
+3
+from Ram to everyone:    3:11 PM
+3
+from Ram to everyone:    3:11 PM
+webby
+from Aman to everyone:    3:12 PM
+webby
+from Aman to everyone:    3:13 PM
+.spec.replicas
+from Ram to everyone:    3:15 PM
+webby2
+from Hitesh Kumar Dhuria to everyone:    3:15 PM
+2
+from irfan.a.hussain to everyone:    3:15 PM
+2
+from Chad Feeser to everyone:    3:18 PM
+kubectl describe pod demopod -n default
+from Chad Feeser to everyone:    3:19 PM
+SCROLL UP:
+ctrl b (hands off keyboard) [
+from ramon.brooker to everyone:    3:22 PM
+you can't even use kill -9 
+from ramon.brooker to everyone:    3:23 PM
+I learned tha tthe hard way when I first played wiith k8s 
+
+from Aman to everyone:    3:42 PM
+That's mega smart
+from Aman to everyone:    3:46 PM
+references docker hub by default?
+from irfan.a.hussain to everyone:    3:46 PM
+default ?
+from Ram to everyone:    3:46 PM
+latest
+from Aman to everyone:    3:46 PM
+latest
+from poonam.rane to everyone:    3:47 PM
+port
+from poonam.rane to everyone:    3:48 PM
+no. you cant
+from poonam.rane to everyone:    3:48 PM
+dont remember why
+from Aman to everyone:    3:48 PM
+Asisgned as part of the cluster creation? 
+from ramon.brooker to everyone:    3:48 PM
+that is the exposed port , you need to map it
+from poonam.rane to everyone:    3:50 PM
+can you configure another port and use that ? instead of 8888 ?
+from ramon.brooker to everyone:    3:50 PM
+node port ? 
+from ramon.brooker to everyone:    3:51 PM
+target port? 
+from Hitesh Kumar Dhuria to everyone:    3:51 PM
+that is for destinaion one.
+from Hitesh Kumar Dhuria to everyone:    3:52 PM
+service destination
+from Hitesh Kumar Dhuria to everyone:    3:53 PM
+sure
+from ramon.brooker to everyone:    4:00 PM
+question
+from Chad Feeser to everyone:    4:01 PM
+10. Create and Configure Basic Pods
+11. Debugging via kubectl port-forward
+from ramon.brooker to everyone:    4:07 PM
+Are we able to complete them later today? 
+from ramon.brooker to everyone:    4:07 PM
+I got pulled into client work 
+from ramon.brooker to everyone:    4:07 PM
+is there a way to link directly to the lab
+from ramon.brooker to everyone:    4:08 PM
+instead of going from intro each time? 
+from Chad Feeser to everyone:    4:08 PM
+https://live.alta3.com/groups/fluffy-gazelles-assembled/your-content
+from Chad Feeser to everyone:    4:08 PM
+https://live.alta3.com/content/k8s-3day/labs/05-Listing-Resources-with-kubectl-get.html
+from Chad Feeser to everyone:    4:08 PM
+https://live.alta3.com/content/k8s-3day/labs/06-Examining-Resources-with-kubectl-describe.html
+from Chad Feeser to everyone:    4:08 PM
+https://live.alta3.com/content/k8s-3day/labs/07-Create-and-Configure-Basic-Pods.html
+from Chad Feeser to everyone:    4:08 PM
+https://live.alta3.com/content/k8s-3day/labs/08-Debugging-via-kubectl-port-forward.html
+
+from ramon.brooker to everyone:    4:10 PM
+Is there also a way to get the full chat history? 
+from ramon.brooker to everyone:    4:10 PM
+my system rebooted 
