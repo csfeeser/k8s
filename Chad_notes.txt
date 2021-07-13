@@ -13,3 +13,31 @@ docker tag <-- assign an image a tag, which is used to identify the registry it 
 
 docker push <-- push an image into a registry
 
+
+# VOLUME MOUNTING IN A MANIFEST
+# we already have a configmap
+# chadsconfigmap <-- inside is the nginx.conf
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zork
+spec:
+  containers:
+    - name: demo
+      image: nginx:1.7.9
+      # step 2: mount the volume inside the container(s)
+      volumeMounts:
+        - name: chads_rockin_volume
+          # at what path can the content of the volume be accessed?
+          mountPath: /etc/nginx/nginx.conf
+          # only use mountpath by itself if you are ok with overwriting the ENTIRE directory!!!
+          subPath: nginx.conf
+          
+          
+# step 1: mount the configmap as a volume inside the Pod
+volumes:
+  - name: chads_rockin_volume
+    configMap:
+      name: chadsconfigmap
+      
