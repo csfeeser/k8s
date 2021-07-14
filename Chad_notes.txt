@@ -1,3 +1,12 @@
+# EXAMPLE QUESTION
+Find the pod that is consuming the most resources inside the kube-system namespace. Output that pods description to /k8s/logs/hogpod.txt
+
+# SOLUTION
+kubectl top -n kube-system
+(read the output, find the offending pod)
+kubectl describe pod hogpod -n kube-system > /k8s/logs/hogpod.txt
+
+
 DOCKER COMMANDS AND WHAT THEY DO:
 
 docker ps <-- list out all Docker created containers (this won't have any effect on containers made in a K8s cluster)
