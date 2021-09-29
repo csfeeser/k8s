@@ -13,7 +13,7 @@
 
 0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
 
-0. Create a single container pod named *challengepod*. Use an nginx image, version 1.7.9.
+0. Create a single container pod named *challengepod*. Use an nginx image, version 1.18.0.
 
 0. Inspect the pod using the `get` and `describe` commands.
 
