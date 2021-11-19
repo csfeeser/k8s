@@ -156,7 +156,7 @@
     `student@bchd:~$` `kubectl describe deploy challengedeploy -n challenge | grep Image:`
     
     ```
-        Image:        nginx:1.14.2
+        Image:        nginx
     ```
     
     `student@bchd:~$` `kubectl describe deploy challengedeploy -n challenge | grep Annotations: -A 4`
@@ -206,7 +206,7 @@
           nodeName: node-3
           containers:
           - name: nginx
-            image: nginx:1.14.2
+            image: nginx
             ports:
             - containerPort: 80
     ```
@@ -221,19 +221,19 @@
 
     **Correctness Check:**
     
-    `student@bchd:~$` `kubectl get ep challengedeploy -n challenge`
+    `student@bchd:~$` `kubectl get svc challengedeploy -n challenge`
     
     ```
     YOUR OUTPUT WILL BE DIFFERENT
-    NAME              ENDPOINTS                                                           AGE
-    challengedeploy   192.168.139.81:80,192.168.139.82:80,192.168.139.83:80 + 1 more...   3s
+    NAME              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+    challengedeploy   ClusterIP   172.16.3.243   <none>        80/TCP    2s
     ```
     
-    - Copy the first `IP_ADDRESS:80` in that output.
+    - Copy the `CLUSTER-IP` address in that output.
     
     `student@bchd:~$` `ssh node-1`
     
-    `student@node-1:~$` `curl IP_ADDRESS:80`
+    `student@node-1:~$` `curl USE_YOUR_IP_ADDRESS:80`
     
     ```
     <!DOCTYPE html>                                                                                                              
