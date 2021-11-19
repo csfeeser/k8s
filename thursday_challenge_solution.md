@@ -1,4 +1,4 @@
-# Mini-CKAD Challenge SOLUTIOJN
+# Mini-CKAD Challenge SOLUTION
 
 ### Procedure
 >Use this page to check your work from your Mini-CKAD challenge! Also available are the answers to each task.
