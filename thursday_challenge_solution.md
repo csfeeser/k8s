@@ -1,38 +1,82 @@
-# Mini-CKAD Challenge
+# Mini-CKAD Challenge SOLUTIOJN
 
 ### Procedure
->The following are questions that involve topics on the CKAD exam! If you're looking for an authentic experience, you may ONLY use https://kubernetes.io/docs/home/ when you must look anything up (this is the only resource you have on the exam). Otherwise, the labs that specify how to complete each step is included. GOOD LUCK!
+>Use this page to check your work from your Mini-CKAD challenge! Also available are the answers to each task.
 
 1. Create a new namespace called *challenge*
 
-    `student@bchd:~$` `kubectl create ns challenge` 
+   Correctness Check:
+   
+    `student@bchd:~$` `kubectl get ns | grep challenge`
+   
+    ```
+    challenge         Active   13m
+    ```
+    
+    <details>
+    <summary>SOLUTION</summary>
 
+    
+    `student@bchd:~$` `kubectl create ns challenge` 
+    
+    </details>
+    
 0. Create a context named *challenge-context* that uses the following:
 
         cluster: kubernetes-the-alta3-way
         namespace: challenge
         user: admin
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `kubectl config set-context challenge-context --user=admin --namespace=challenge --cluster=kubernetes-the-alta3-way`
     
+    </details>
+
 0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
 
-    `student@bchd:~$` `kubectl config use-context challenge-context`
+    <details>
+    <summary>SOLUTION</summary>
 
+    
+    `student@bchd:~$` `kubectl config use-context challenge-context`
+    
+    </details>
+    
 0. Create a single container pod named *challengepod*. Use an nginx image, version 1.18.0.
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `kubectl run challengepod --image=nginx:1.18.0`
+    
+    </details>
 
 0. Inspect the pod using the `get` and `describe` commands.
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `kubectl get pod challengepod`
     
     `student@bchd:~$` `kubectl describe pod challengepod`
     
+    </details>
+    
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `kubectl describe pod challengepod > /home/student/static/poddesc.txt`
     
+    </details>
+ 
 0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment must:
     - Be named *challengedeploy*
     - Create 4 replicas.
@@ -46,6 +90,10 @@
           i: am
           so: awesome
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `vim deploychallenge.yml`
     
     ```yaml
@@ -79,17 +127,29 @@
     ```
 
     `student@bchd:~$` `kubectl apply -f deploychallenge.yml`
-
+    
+    </details>
+    
 0. Expose your deployment with a ClusterIP service.
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `kubectl expose deploy challengedeploy`
     
+    </details>
+     
 0. Create a PersistentVolume with the following parameters:
    - 2GB storage
    - name: persistentchallenge
    - storage class: challenge
    - host path: /mnt/data
-   
+
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `vim PVchallenge.yml`
    
     ```yaml
@@ -111,11 +171,18 @@
 
     `student@bchd:~$` `kubectl apply -f PVchallenge.yml`
     
+    </details>
+    
+    
    Create a PersistentVolumeClaim with the following parameters:
    - 1GB storage
    - name: persistentclaimchallenge
    - ReadWriteOnce permission
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `vim PVCchallenge.yml`
 
     ```yaml
@@ -134,30 +201,38 @@
 
     `student@bchd:~$` `kubectl apply -f PVCchallenge.yml`
     
+    </details>
+    
     Mount this PersistentVolumeClaim into a pod named `storagepodlet` using the image `nginx`.
 
+    <details>
+    <summary>SOLUTION</summary>
+
+    
     `student@bchd:~$` `vim storagepodlet.yml`
 
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: storagepodlet
-spec:
-  containers:
-    - name: myfrontend
-      image: nginx
-      volumeMounts:
-      - mountPath: "/var/www/html"
-        name: mypd
-  volumes:
-    - name: mypd
-      persistentVolumeClaim:
-        claimName: persistentclaimchallenge
-```
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: storagepodlet
+    spec:
+      containers:
+        - name: myfrontend
+          image: nginx
+          volumeMounts:
+          - mountPath: "/var/www/html"
+            name: mypd
+      volumes:
+        - name: mypd
+          persistentVolumeClaim:
+            claimName: persistentclaimchallenge
+    ```
 
-`student@bchd:~$` `kubectl apply -f storagepodlet.yml`
-
+    `student@bchd:~$` `kubectl apply -f storagepodlet.yml`
+    
+    </details>
+    
 ## When you are finished, return to the correct context!
 
 `student@bchd:~$` `kubectl config use-context kubernetes-the-alta3-way`
