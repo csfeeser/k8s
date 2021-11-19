@@ -130,10 +130,43 @@
           i: am
           so: awesome
 
+    **Correctness Check:**
+
+    `student@bchd:~$` `kubectl get pods -o wide | grep challengedeploy`
+    
+    ```
+    challengedeploy-79cd84ccf8-2474t   1/1     Running   0          45m   192.168.139.81   node-3   <none>           <none>
+    challengedeploy-79cd84ccf8-hrfx9   1/1     Running   0          45m   192.168.139.82   node-3   <none>           <none>
+    challengedeploy-79cd84ccf8-kgmm9   1/1     Running   0          45m   192.168.139.84   node-3   <none>           <none>
+    challengedeploy-79cd84ccf8-kksm9   1/1     Running   0          45m   192.168.139.83   node-3   <none>           <none>
+    ```
+    
+    `student@bchd:~$` `kubectl describe deploy challengedeploy -n challenge | grep Image:`
+    
+    ```
+        Image:        nginx:1.14.2
+    ```
+    
+    `student@bchd:~$` `kubectl describe deploy challengedeploy -n challenge | grep Annotations: -A 4`
+    
+    ```
+    Annotations:            deployment.kubernetes.io/revision: 1
+                        i: am
+                        kubernetes: is
+                        so: awesome
+                        super: easy
+    ```
+    
+    `student@bchd:~$` `kubectl describe deploy challengedeploy -n challenge | grep Labels:`
+    
+    ```
+    Labels:                 challenge=met
+    ```
+    
+    
     <details>
     <summary>SOLUTION</summary>
 
-    
     `student@bchd:~$` `vim deploychallenge.yml`
     
     ```yaml
@@ -182,11 +215,11 @@
     challengedeploy   192.168.139.81:80,192.168.139.82:80,192.168.139.83:80 + 1 more...   3s
     ```
     
-    - Copy the first /<IP/>:80 in that output.
+    - Copy the first `IP_ADDRESS:80` in that output.
     
     `student@bchd:~$` `ssh node-1`
     
-    `student@node-1:~$` `curl <IP>:80`
+    `student@node-1:~$` `curl IP_ADDRESS:80`
     
     ```
     <!DOCTYPE html>                                                                                                              
@@ -198,7 +231,6 @@
         
     <details>
     <summary>SOLUTION</summary>
-
     
     `student@bchd:~$` `kubectl expose deploy challengedeploy`
     
@@ -210,6 +242,15 @@
    - storage class: challenge
    - host path: /mnt/data
 
+    **Correctness Check:**
+    
+    `student@bchd:~$` `kubectl get pv -n challenge`
+    
+    ```
+    NAME                  CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                STORAGECLASS   REASON   AGE
+    persistentchallenge   2Gi        RWO            Retain           Bound    challenge/persistentclaimchallenge   challenge               33m
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
 
@@ -243,6 +284,15 @@
    - name: persistentclaimchallenge
    - ReadWriteOnce permission
 
+    **Correctness Check:**
+    
+    `student@bchd:~$` `kubectl get pvc -n challenge`
+    
+    ```
+    NAME                       STATUS   VOLUME                CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+    persistentclaimchallenge   Bound    persistentchallenge   2Gi        RWO            challenge      32m
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
 
@@ -269,10 +319,18 @@
     
     Mount this PersistentVolumeClaim into a pod named `storagepodlet` using the image `nginx`.
 
+    **Correctness Check:**
+    
+    `student@bchd:~$` `kubectl get pod storagepodlet -n challenge`
+    
+    ```
+    NAME            READY   STATUS    RESTARTS   AGE
+    storagepodlet   1/1     Running   0          34m
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
 
-    
     `student@bchd:~$` `vim storagepodlet.yml`
 
     ```yaml
