@@ -21,6 +21,8 @@
     
     </details>
     
+   --------------------------------------- 
+   
 0. Create a context named *challenge-context* that uses the following:
 
         cluster: kubernetes-the-alta3-way
@@ -46,6 +48,8 @@
     
     </details>
 
+   ---------------------------------------
+   
 0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
 
    **Correctness Check:**
@@ -60,6 +64,8 @@
     
     </details>
     
+   ---------------------------------------
+   
 0. Create a single container pod named *challengepod*. Use an nginx image, version 1.18.0.
 
 
@@ -77,6 +83,8 @@
     `student@bchd:~$` `kubectl run challengepod --image=nginx:1.18.0`
     
     </details>
+    
+    ---------------------------------------
 
 0. Inspect the pod using the `get` and `describe` commands.
 
@@ -88,6 +96,8 @@
     `student@bchd:~$` `kubectl describe pod challengepod -n challenge`
     
     </details>
+    
+    ---------------------------------------
     
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
 
@@ -116,6 +126,8 @@
     `student@bchd:~$` `kubectl describe pod challengepod -n challenge > /home/student/static/poddesc.txt`
     
     </details>
+    
+    ---------------------------------------
  
 0. Convert your the manifest you used to create your Pod in step 4 into a Deployment manifest, then create it. Your deployment must:
     - Be named *challengedeploy*
@@ -203,6 +215,8 @@
     
     </details>
     
+    ---------------------------------------
+    
 0. Expose your deployment with a ClusterIP service.
 
     **Correctness Check:**
@@ -235,6 +249,8 @@
     `student@bchd:~$` `kubectl expose deploy challengedeploy`
     
     </details>
+    
+    ---------------------------------------
      
 0. Create a PersistentVolume with the following parameters:
    - 2GB storage
