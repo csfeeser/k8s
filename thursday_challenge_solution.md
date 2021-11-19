@@ -1,4 +1,4 @@
-# Mini-CKAD Challenge SOLUTION
+# Mini-CKAD Challenge SOLUTIOJN
 
 ### Procedure
 >Use this page to check your work from your Mini-CKAD challenge! Also available are the answers to each task.
@@ -14,7 +14,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     
     `student@bchd:~$` `kubectl create ns challenge` 
@@ -41,7 +41,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     
     `student@bchd:~$` `kubectl config set-context challenge-context --user=admin --namespace=challenge --cluster=kubernetes-the-alta3-way`
@@ -57,7 +57,7 @@
     *All Pods/Deployments/Services/etc. below are in the challenge namespace.*
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     
     `student@bchd:~$` `kubectl config use-context challenge-context`
@@ -78,7 +78,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
    
     `student@bchd:~$` `kubectl run challengepod --image=nginx:1.18.0`
     
@@ -89,7 +89,7 @@
 0. Inspect the pod using the `get` and `describe` commands.
 
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     `student@bchd:~$` `kubectl get pod challengepod -n challenge`
     
@@ -121,7 +121,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     `student@bchd:~$` `kubectl describe pod challengepod -n challenge > /home/student/static/poddesc.txt`
     
@@ -177,7 +177,7 @@
     
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     `student@bchd:~$` `vim deploychallenge.yml`
     
@@ -244,7 +244,7 @@
     ```
         
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
     
     `student@bchd:~$` `kubectl expose deploy challengedeploy`
     
@@ -268,7 +268,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     
     `student@bchd:~$` `vim PVchallenge.yml`
@@ -310,7 +310,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     
     `student@bchd:~$` `vim PVCchallenge.yml`
@@ -345,7 +345,7 @@
     ```
     
     <details>
-    <summary>**SOLUTION**</summary>
+    <summary><b>SOLUTION</b></summary>
 
     `student@bchd:~$` `vim storagepodlet.yml`
 
