@@ -5,7 +5,7 @@
 
 1. Create a new namespace called *challenge*
 
-   Correctness Check:
+   **Correctness Check:**
    
     `student@bchd:~$` `kubectl get ns | grep challenge`
    
@@ -27,6 +27,17 @@
         namespace: challenge
         user: admin
 
+   **Correctness Check:**
+   
+    `student@bchd:~$` `kubectl config view | grep "name: challenge-context" -B 3`
+   
+    ```
+     cluster: kubernetes-the-alta3-way
+     namespace: challenge
+     user: admin
+    name: challenge-context
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
 
@@ -37,6 +48,10 @@
 
 0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
 
+   **Correctness Check:**
+   
+    *All Pods/Deployments/Services/etc. below are in the challenge namespace.*
+    
     <details>
     <summary>SOLUTION</summary>
 
@@ -47,10 +62,18 @@
     
 0. Create a single container pod named *challengepod*. Use an nginx image, version 1.18.0.
 
+
+    **Correctness Check:**
+   
+    `student@bchd:~$` `kubectl describe pod challengepod | grep Image:`
+    
+    ```
+        Image:          nginx:1.18.0
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
-
-    
+   
     `student@bchd:~$` `kubectl run challengepod --image=nginx:1.18.0`
     
     </details>
@@ -60,7 +83,6 @@
     <details>
     <summary>SOLUTION</summary>
 
-    
     `student@bchd:~$` `kubectl get pod challengepod`
     
     `student@bchd:~$` `kubectl describe pod challengepod`
@@ -69,10 +91,28 @@
     
 0. Output your pod description into a file named `poddesc.txt`. Save it to `/home/student/static/`.
 
+    **Correctness Check:**
+    
+    `student@bchd:~$` `cat /home/student/static/poddesc.txt`
+    
+    ```
+    [...]
+    QoS Class:       BestEffort
+    Node-Selectors:  <none>
+    Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                     node.kubernetes.io/unreachable:NoExecute for 300s
+    Events:
+      Type    Reason     Age   From               Message
+      ----    ------     ----  ----               -------
+      Normal  Scheduled  25m   default-scheduler  Successfully assigned challenge/challengepod to node-1
+      Normal  Pulled     25m   kubelet, node-1    Container image "nginx:1.18.0" already present on machine
+      Normal  Created    25m   kubelet, node-1    Created container challengepod
+      Normal  Started    25m   kubelet, node-1    Started container challengepod
+    ```
+    
     <details>
     <summary>SOLUTION</summary>
 
-    
     `student@bchd:~$` `kubectl describe pod challengepod > /home/student/static/poddesc.txt`
     
     </details>
@@ -132,6 +172,30 @@
     
 0. Expose your deployment with a ClusterIP service.
 
+    **Correctness Check:**
+    
+    `student@bchd:~$` `kubectl get ep challengedeploy`
+    
+    ```
+    YOUR OUTPUT WILL BE DIFFERENT
+    NAME              ENDPOINTS                                                           AGE
+    challengedeploy   192.168.139.81:80,192.168.139.82:80,192.168.139.83:80 + 1 more...   3s
+    ```
+    
+    - Copy the first /<IP/>:80 in that output.
+    
+    `student@bchd:~$` `ssh node-1`
+    
+    `student@node-1:~$` `curl <IP>:80`
+    
+    ```
+    <!DOCTYPE html>                                                                                                              
+    <html>                                                                                                                       
+    <head>                                                                                                                       
+    <title>Welcome to nginx!</title> 
+    [...]
+    ```
+        
     <details>
     <summary>SOLUTION</summary>
 
