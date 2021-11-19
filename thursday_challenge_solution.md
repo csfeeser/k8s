@@ -65,7 +65,7 @@
 
     **Correctness Check:**
    
-    `student@bchd:~$` `kubectl describe pod challengepod | grep Image:`
+    `student@bchd:~$` `kubectl describe pod challengepod -n challenge | grep Image:`
     
     ```
         Image:          nginx:1.18.0
@@ -83,9 +83,9 @@
     <details>
     <summary>SOLUTION</summary>
 
-    `student@bchd:~$` `kubectl get pod challengepod`
+    `student@bchd:~$` `kubectl get pod challengepod -n challenge`
     
-    `student@bchd:~$` `kubectl describe pod challengepod`
+    `student@bchd:~$` `kubectl describe pod challengepod -n challenge`
     
     </details>
     
@@ -113,7 +113,7 @@
     <details>
     <summary>SOLUTION</summary>
 
-    `student@bchd:~$` `kubectl describe pod challengepod > /home/student/static/poddesc.txt`
+    `student@bchd:~$` `kubectl describe pod challengepod -n challenge > /home/student/static/poddesc.txt`
     
     </details>
  
@@ -132,7 +132,7 @@
 
     **Correctness Check:**
 
-    `student@bchd:~$` `kubectl get pods -o wide | grep challengedeploy`
+    `student@bchd:~$` `kubectl get pods -o wide -n challenge | grep challengedeploy`
     
     ```
     challengedeploy-79cd84ccf8-2474t   1/1     Running   0          45m   192.168.139.81   node-3   <none>           <none>
@@ -207,7 +207,7 @@
 
     **Correctness Check:**
     
-    `student@bchd:~$` `kubectl get ep challengedeploy`
+    `student@bchd:~$` `kubectl get ep challengedeploy -n challenge`
     
     ```
     YOUR OUTPUT WILL BE DIFFERENT
