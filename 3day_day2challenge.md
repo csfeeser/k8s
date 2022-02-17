@@ -29,7 +29,7 @@ Add one more feature to a Pod you made (either one) that has an `nginx` image. A
 
 ## SOLUTION
 
-**Challenge 3 command-** 
+**Challenge 3 command-** `kubectl cp day2challenge:/etc/nginx/nginx.conf ~/static/nginx.conf.old`
 
 ```yaml
 apiVersion: v1
