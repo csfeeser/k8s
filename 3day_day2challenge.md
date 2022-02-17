@@ -27,3 +27,27 @@ Add one more feature to a Pod you made (either one) that has an `nginx` image. A
           - /etc/nginx/nginx.conf
 ```
 
+## SOLUTION
+
+**Challenge 3 command-** 
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: day2challenge
+  namespace: kube-public
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    livenessProbe:
+      initialDelaySeconds: 2 
+      periodSeconds: 5    
+      timeoutSeconds: 1  
+      failureThreshold: 3 
+      exec:
+        command:
+          - cat
+          - /etc/nginx/nginx.conf
+```
