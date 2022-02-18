@@ -63,3 +63,39 @@ spec:
     configMap:
       name: nginx-txt
 ```
+
+# SOLUTION
+
+```yaml
+---
+apiVersion: v1 # put a whitespace after :
+kind: Pod # capitalize kind!
+metadata:
+  name: nginx-configured
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.18.0 # ErrImgPull
+    ports:
+    - containerPort: 80
+    volumeMounts: 
+    - name: garfield
+      mountPath: /etc/nginx/nginx.conf
+      subPath: nginx.conf # needs subpath!
+    - name: odie
+      mountPath: /var/www/index.html
+      subPath: index.html
+    - name: jon
+      mountPath: /var/www/static/nginx.txt
+      subPath: nginx.txt
+  volumes:
+  - name: garfield
+    configMap:
+      name: nginx-conf # wrong configmap name!
+  - name: odie
+    configMap:
+      name: index-file 
+  - name: jon
+    configMap:
+      name: nginx-txt
+```
