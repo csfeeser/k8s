@@ -75,7 +75,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx:1.18.0 # ErrImgPull
+    image: nginx:1.18.0 # typo in image name caused ErrImgPull
     ports:
     - containerPort: 80
     volumeMounts: 
