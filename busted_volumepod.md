@@ -8,7 +8,7 @@
 Below is a familiar looking Pod manifest... you used this when creating a Pod with an `nginx` image and three mounted configmaps yesterday. However, it is now riddled with errors!... the type of errors that are very common and you're likely to encounter :) 
 
 
-**Are you unsure if you have the correct configmaps from yesterday?**  
+**Are you unsure if you have the correct configmaps?**  
 Just create the following bash script and then execute it.  
 
 `student@bchd:~$` `vim cmsetup.sh`  
