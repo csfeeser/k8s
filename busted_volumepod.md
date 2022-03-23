@@ -64,6 +64,7 @@ spec:
       name: nginx-txt
 ```
 
+<!--
 # SOLUTION
 
 ```yaml
@@ -99,3 +100,4 @@ spec:
     configMap:
       name: nginx-txt
 ```
+-->
