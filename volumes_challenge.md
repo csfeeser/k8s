@@ -36,3 +36,30 @@ Let's take some of the concepts we learned yesterday and apply them in some reso
 #### BONUS
 
 Guarantee that this Pod will be scheduled on the same node every time!
+
+<!--
+#### SOLUTION
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: day4challenge
+spec:
+  containers:
+  - name: nginx-game
+    image: nginx
+    volumeMounts:
+    - name: game-storage
+      mountPath: "/storage"
+    - name: game-config
+      mountPath: "/data"
+  volumes:
+  - name: game-storage
+    persistentVolumeClaim:
+      claimName: persistentclaimchallenge
+  - name: game-config
+    configMap:
+      name: nintendo
+```
+-->
