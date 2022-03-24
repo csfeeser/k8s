@@ -32,3 +32,7 @@ Let's take some of the concepts we learned yesterday and apply them in some reso
     - ReadWriteOnce permission
 
 0. Create a pod named `day4challenge` using an `nginx` image. Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pod/container. The `mountpath` is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
+
+#### BONUS
+
+Guarantee that this Pod will be scheduled on the same node every time!
