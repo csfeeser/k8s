@@ -37,7 +37,6 @@ Let's take some of the concepts we learned yesterday and apply them in some reso
 
 Guarantee that this Pod will be scheduled on the same node every time!
 
-<!--
 #### SOLUTION
 
 ```yaml
@@ -62,4 +61,3 @@ spec:
     configMap:
       name: nintendo
 ```
--->
