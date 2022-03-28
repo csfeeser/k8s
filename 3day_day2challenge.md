@@ -20,10 +20,10 @@ Inside *nginx* containers, in the `/etc/nginx` directory, there is a file named 
 #### Challenge 4
 Add one more feature to a Pod you made (either one). Make sure that the container in that Pod does NOT consume more than `1024Mi` in memory and `400m` of CPU.
 
-<!--
+
 ## SOLUTION
 
-**Challenge 3 command-** `kubectl cp day2challenge:/etc/nginx/nginx.conf ~/static/nginx.conf.old`
+**Challenge 3 command-** `kubectl cp day2challenge:etc/nginx/nginx.conf ~/static/nginx.conf.old`
 
 ```yaml
 apiVersion: v1
@@ -40,4 +40,3 @@ spec:
         cpu: 400m
         mem: 1024Mi
 ```
--->
