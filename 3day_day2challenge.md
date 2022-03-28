@@ -15,18 +15,12 @@ Make the same Pod from challenge 1 again, this time in a different namespace.
 **NAMESPACE:** `kube-public`  
 
 #### Challenge 3
-Inside *nginx* containers, in the `/etc/nginx` directory, there is a file named `nginx.conf`. Copy that file to your local machine in the `~/static` directory, renaming the local copy as `nginx.conf.old`.  
+Inside *nginx* containers, in the `/etc/nginx` directory, there is a file named `nginx.conf`. Copy that file to your local machine in the `~/static` directory, renaming the local copy as `nginx.conf.old`.  **HINT: Check out `16. LECTURE: Kubectl exec and cp`**
 
 #### Challenge 4
-Add one more feature to a Pod you made (either one) that has an `nginx` image. Add a feature that will kill the container if it doesn't respond fast enough. Here's a method you can use to check its responsiveness:  
+Add one more feature to a Pod you made (either one). Make sure that the container in that Pod does NOT consume more than `1024Mi` in memory and `400m` of CPU.
 
-```yaml
-      exec:
-        command:
-          - cat
-          - /etc/nginx/nginx.conf
-```
-
+<!--
 ## SOLUTION
 
 **Challenge 3 command-** `kubectl cp day2challenge:/etc/nginx/nginx.conf ~/static/nginx.conf.old`
@@ -41,13 +35,9 @@ spec:
   containers:
   - name: nginx
     image: nginx
-    livenessProbe:
-      initialDelaySeconds: 2 
-      periodSeconds: 5    
-      timeoutSeconds: 1  
-      failureThreshold: 3 
-      exec:
-        command:
-          - cat
-          - /etc/nginx/nginx.conf
+    resources:
+      limits:
+        cpu: 400m
+        mem: 1024Mi
 ```
+-->
