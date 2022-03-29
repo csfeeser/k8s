@@ -23,3 +23,4 @@ Recommended commands:
 - `kubectl get`
 - `kubectl describe`
 - `kubectl edit`
+- **NEW RESOURCE OBJECT** `kubectl get events`
