@@ -24,3 +24,29 @@ Recommended commands:
 - `kubectl describe`
 - `kubectl edit`
 - **NEW RESOURCE OBJECT** `kubectl get events`
+
+<details>
+<summary>Hint #1</summary>
+<br>
+kubectl get pods -n fail02  
+</details>
+
+<details>
+<summary>Hint #2</summary>
+<br>
+kubectl get events -n fail02  
+</details>
+
+<details>
+<summary>Hint #3</summary>
+<br>
+There is a typo in the image name!
+</details>
+
+<details>
+<summary>Solution</summary>
+<br>
+kubectl edit pod failingpod02 -n fail02  
+<br>
+Change line 18.  
+</details>
