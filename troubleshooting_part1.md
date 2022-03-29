@@ -34,6 +34,10 @@ kubectl get pods -n fail02
 <details>
 <summary>Hint #2</summary>
 <br>
+kubectl describe pod failingpod02 -n fail02
+<br>
+    <bold>AND/OR</bold>
+<br>
 kubectl get events -n fail02  
 </details>
 
