@@ -1,6 +1,6 @@
 # Troubleshooting Challenge
 
-![Image description](https://kubernetes.io/images/blog/2018-09-06-2018-steering-committee-election-cycle-kicks-off/sc-elections.png)
+<img src="https://kubernetes.io/images/blog/2018-09-06-2018-steering-committee-election-cycle-kicks-off/sc-elections.png" width="300"/>
 
 Knowing how to troubleshoot is a skill that is essential to becoming a proficient Kubernetes Developer or Administrator.
 
