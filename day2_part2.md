@@ -16,27 +16,28 @@ Create a pod which possesses the following:
 - `webby` should be guaranteed `300m` cpu.
 - Guarantee that `nginx` runs all processes as user `0` (root).
 
-<!--
-### Solution (thanks to Jared)
+<details>
+<summary>Solution:</summary>
 
 ```
-  1 apiVersion: v1
-  2 kind: Pod
-  3 metadata:
-  4   name: midday-oops
-  5 spec:
-  6   securityContext:
-  7     runAsUser: 1000
-  8   containers:
-  9   - name: nginx
- 10     image: nginx
- 11     resources:
- 12       limits:
- 13         cpu: "300m"
- 14         memory: "512Mi"
- 15   - name: webby
- 16     image: bchd.registry/alta3-webby
- 17     resources:
- 18       requests:
- 19         cpu: "300m"
+apiVersion: v1
+kind: Pod
+metadata:
+  name: midday-oops
+spec:
+  containers:
+  - name: nginx   # first container
+    image: nginx
+    resources:
+      limits: # nginx is only allowed to consume 300m cpu and 512Mi memory.
+        cpu: "300m"
+        memory: "512Mi"
+    securityContext: # Guarantee that nginx runs all processes as user 0 (root).
+      runAsUser: 0
+  - name: webby   # second container
+    image: registry.gitlab.com/alta3research/webby
+    resources:
+      requests: # webby should be guaranteed 300m cpu.
+        cpu: "300m"
 ```
+</details>
