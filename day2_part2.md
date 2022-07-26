@@ -19,7 +19,7 @@ Create a pod which possesses the following:
 <details>
 <summary>Solution:</summary>
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
