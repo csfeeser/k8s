@@ -16,6 +16,7 @@ Create a pod which possesses the following:
 - `webby` should be guaranteed `300m` cpu.
 - Guarantee that `nginx` runs all processes as user `1000`.
 
+<!--
 ### Solution (thanks to Jared)
 
 ```
