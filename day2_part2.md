@@ -11,7 +11,7 @@ EX:
 ### Part 2
 Create a pod which possesses the following:
 
-- has TWO containers: one with `nginx` and one with `bchd.registry/alta3-webby` as the images
+- has TWO containers: one with `nginx` and one with `registry.gitlab.com/alta3research/webby` as the images
 - `nginx` is only allowed to consume `300m` cpu and `512Mi` memory.
 - `webby` should be guaranteed `300m` cpu.
 - Guarantee that `nginx` runs all processes as user `1000`.
