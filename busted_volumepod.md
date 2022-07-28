@@ -61,6 +61,37 @@ spec:
       name: nginx-txt
 ```
 
+
+<details>
+<summary>error: error parsing trial.yml: error converting YAML to JSON: yaml: line 2: mapping values are not allowed in this context</summary>
+<br>
+Put a space before v1.
+</details>
+
+<details>
+<summary>Error from server (BadRequest): error when creating "trial.yml": pod in version "v1" cannot be handled as a Pod: no kind "pod" is registered for version "v1" in scheme "k8s.io/kubernetes/pkg/api/legacyscheme/scheme.go:30"</summary>
+<br>
+capitalize "P" in Pod
+</details>
+
+<details>
+<summary>MountVolume.SetUp failed for volume "garfield" : configmap "nermal-conf" not found</summary>
+<br>
+line 23 should be nginx-conf not nermal-conf
+</details>
+
+<details>
+<summary>Failed to pull image "nnginx:1.18.0": rpc error: code = Unknown desc = failed to pull and unpack image "docker.io/library/nnginx:1.18.0"</summary>
+<br>
+Typo in the image name! Should be nginx:1.18.0
+</details>
+
+<details>
+<summary>Error: failed to create containerd task: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error mounting "/var/lib/kubelet/pods/ac124c92-65d1-4a5e-a193-7d36b8840ff5/volumes/kubernetes.io~configmap/garfield" to rootfs at "/etc/nginx/nginx.conf"
+</summary>
+<br>
+The garfield volume's mountPath is /etc/nginx/, which overwrites EVERYTHING in that directory! Add a subpath.
+</details>
 <!--
 # SOLUTION
 
