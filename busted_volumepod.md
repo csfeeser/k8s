@@ -8,18 +8,15 @@
 Below is a familiar looking Pod manifest... you used this when creating a Pod with an `nginx` image and three mounted configmaps yesterday. However, it is now riddled with errors!... the type of errors that are very common and you're likely to encounter :) 
 
 
-**Are you unsure if you have the correct configmaps?**  
-Just create the following bash script and then execute it.  
-
-`student@bchd:~$` `vim cmsetup.sh`  
+**Copy/paste the entire block of commands below and paste them to your command line.**  
 
 ```bash
 kubectl delete cm --all
-
+kubectl config use-context kubernetes-the-alta3-way
 wget https://static.alta3.com/projects/k8s/nginx.conf.final -O nginx.conf
 wget https://static.alta3.com/projects/k8s/index.html2 -O index.html
 echo "It was a bright cold day in April, and the clocks were striking thirteen." > nginx.txt
-
+kubectl delete cm --all
 kubectl create configmap nginx-txt --from-file=nginx.txt
 kubectl create configmap nginx-conf --from-file=nginx.conf
 kubectl create configmap index-file --from-file=index.html
@@ -40,7 +37,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginxx:1.18.0
+    image: nnginx:1.18.0
     ports:
     - containerPort: 80
     volumeMounts: 
