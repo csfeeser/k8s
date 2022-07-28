@@ -1,8 +1,8 @@
-# Volumes Challenge!
+# Volumes and Deployments Challenge!
 
 <img src="https://assets.ubuntu.com/v1/64cf3b1b-now-witness-the-power-of-this-fully-operational-kubernetes-cluster.jpeg" width="300"/>
 
-Let's take some of the concepts we learned yesterday and apply them in some resources of your own creation!
+Let's take some of the concepts we learned and apply them in some resources of your own creation!
 
 1. Create the following file:
 
@@ -31,8 +31,9 @@ Let's take some of the concepts we learned yesterday and apply them in some reso
     - storage class: manual
     - ReadWriteOnce permission
 
-0. Create a pod named `day4challenge` using an `nginx` image. Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pod/container. The `mountpath` is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
+0. Create a deployment named `day4challenge` using an `nginx` image. Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pods of the `day4challenge` deployment. The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
 
+<!--
 #### BONUS
 
 Guarantee that this Pod will be scheduled on the same node every time!
