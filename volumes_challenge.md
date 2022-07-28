@@ -38,28 +38,39 @@ Let's take some of the concepts we learned and apply them in some resources of y
 
 Guarantee that this Pod will be scheduled on the same node every time!
 
-<!--
+
 #### SOLUTION
 
 ```yaml
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: day4challenge
 spec:
-  containers:
-  - name: nginx-game
-    image: nginx
-    volumeMounts:
-    - name: game-storage
-      mountPath: "/storage"
-    - name: game-config
-      mountPath: "/data"
-  volumes:
-  - name: game-storage
-    persistentVolumeClaim:
-      claimName: persistentclaimchallenge
-  - name: game-config
-    configMap:
-      name: nintendo
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.18.0
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: snes
+            mountPath: /data
+          - name: memcard
+            mountPath: /storage
+      volumes:
+      - name: snes
+        configMap:
+          name: nintendo
+      - name: memcard
+        persistentVolumeClaim:
+          claimName: persistentclaimchallenge
 ```
