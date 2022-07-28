@@ -22,10 +22,6 @@ kubectl create configmap nginx-conf --from-file=nginx.conf
 kubectl create configmap index-file --from-file=index.html
 ```
 
-Save and quit.
-
-`student@bchd:~$` `bash cmsetup.sh`  
-
 Do your best to find and fix all the errors before creating this Pod! You cannot claim success until the *STATUS* of the container says *Running*!
 
 ```yaml
