@@ -8,7 +8,7 @@ The objective of this challenge is to fix broken stuff. To simulate this, you'll
 
 ### SETUP
 
-0. The first thing we'll do is create some havoc in our cluster. 
+1. The first thing we'll do is create some havoc in our cluster. 
 
     `student@bchd` `cd && wget https://static.alta3.com/projects/k8s/havoc01.sh && bash havoc01.sh`
     
