@@ -19,4 +19,4 @@ The objective of this challenge is to fix broken stuff. To simulate this, you'll
         NAME          READY   UP-TO-DATE   AVAILABLE   AGE
         failingpods   2/3     2            2           1m
     
-0. You have a Pod where one of the containers is failing. Fix it :)
+0. One of our replicas is failing to launch! Identify the problem and attempt a solution!
