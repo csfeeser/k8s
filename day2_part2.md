@@ -1,6 +1,5 @@
 # MID-DAY MINI CHALLENGE:
-
-![Image description](https://media.slid.es/uploads/730082/images/5298631/k8s-meme.jpg)
+<img src="https://media.slid.es/uploads/730082/images/5298631/k8s-meme.jpg" width="300"/>
 
 ### Part 1
 Find which pod in your cluster is consuming the most resources. Output the results of kubectl describe to a file named hogpod.txt
@@ -21,7 +20,8 @@ Create a pod which possesses the following:
   ```
 - `engine-x` is only allowed to consume `300m` cpu and `512Mi` memory.
 - `bizzeebox` should be guaranteed `300m` cpu.
-- Guarantee that `bizzeebox` runs all processes as user `1000`.
+- Guarantee that `bizzeebox` runs as user `1000`.
+  > test this with a `kubectl exec -it <PODNAME> -- sh` and run a `whoami` command.
 
 <details>
 <summary>Solution:</summary>
