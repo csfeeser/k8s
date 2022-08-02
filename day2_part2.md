@@ -11,10 +11,17 @@ EX:
 ### Part 2
 Create a pod which possesses the following:
 
-- has TWO containers: one with `nginx` and one with `registry.gitlab.com/alta3research/webby` as the images
-- `nginx` is only allowed to consume `300m` cpu and `512Mi` memory.
-- `webby` should be guaranteed `300m` cpu.
-- Guarantee that `nginx` runs all processes as user `0` (root).
+- has both containers:
+  ```yaml
+    - name: bizzeebox
+      image: busybox:1.35.0
+      command: [ "sh", "-c", "sleep 1h" ]
+    - name: engine-x
+      image: nginx
+  ```
+- `engine-x` is only allowed to consume `300m` cpu and `512Mi` memory.
+- `bizzeebox` should be guaranteed `300m` cpu.
+- Guarantee that `bizzeebox` runs all processes as user `1000`.
 
 <details>
 <summary>Solution:</summary>
