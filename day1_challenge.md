@@ -1,6 +1,6 @@
 # Kubernetes Essentials Day 1 Challenge
 
-![Image description](https://memegenerator.net/img/instances/72738808.jpg)
+<img src="https://pbs.twimg.com/media/FYhiT-BWAAAA2FB.jpg" width="200"/>
 
 ### Procedure
 
