@@ -32,7 +32,7 @@ Create a pod which possesses the following:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: midday-oops
+  name: midday-challenge
 spec:
   containers:
   - name: bizzeebox
