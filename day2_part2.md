@@ -35,18 +35,19 @@ metadata:
   name: midday-oops
 spec:
   containers:
-  - name: nginx   # first container
+  - name: bizzeebox
+    image: busybox:1.35.0
+    command: [ "sh", "-c", "sleep 1h" ]
+    resources:
+      requests:
+        cpu: 300m
+    securityContext:
+      runAsUser: 1000
+  - name: engine-x
     image: nginx
     resources:
-      limits: # nginx is only allowed to consume 300m cpu and 512Mi memory.
-        cpu: "300m"
-        memory: "512Mi"
-    securityContext: # Guarantee that nginx runs all processes as user 0 (root).
-      runAsUser: 0
-  - name: webby   # second container
-    image: registry.gitlab.com/alta3research/webby
-    resources:
-      requests: # webby should be guaranteed 300m cpu.
-        cpu: "300m"
+      limits:
+        cpu: 300m
+        memory: 512Mi
 ```
 </details>
