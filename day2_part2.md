@@ -1,11 +1,13 @@
 # MID-DAY MINI CHALLENGE:
 <img src="https://media.slid.es/uploads/730082/images/5298631/k8s-meme.jpg" width="300"/>
 
+<!--
 ### Part 1
 Find which pod in your cluster is consuming the most resources. Output the results of kubectl describe to a file named hogpod.txt
 
 EX:
 `kubectl describe PODNAME -n NAMESPACE > ~/hogpod.txt`
+-->
 
 ### Part 2
 Create a pod which possesses the following:
