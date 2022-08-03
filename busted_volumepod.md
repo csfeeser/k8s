@@ -89,7 +89,7 @@ Typo in the image name! Should be nginx:1.18.0
 The garfield volume's mountPath is /etc/nginx/, which overwrites EVERYTHING in that directory! Add a subpath.
 </details>
 
-<!--
+
 # SOLUTION
 
 ```yaml
