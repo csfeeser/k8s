@@ -33,6 +33,6 @@ Let's take some of the concepts we learned and apply them in some resources of y
 0. Create a Pod with the following:
 - name the Pod `day4challenge`
 - give the Pod the label `k8s: isawesome`
-- Use a `busybox:1.35.0` image
+- Use a `nginx` image
 - Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo`.
 > The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
