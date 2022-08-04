@@ -1,4 +1,4 @@
-# Volumes and Deployments Challenge!
+# Volumes Challenge!
 
 <img src="https://assets.ubuntu.com/v1/64cf3b1b-now-witness-the-power-of-this-fully-operational-kubernetes-cluster.jpeg" width="300"/>
 
@@ -29,9 +29,13 @@ Let's take some of the concepts we learned and apply them in some resources of y
     - 1GB storage
     - name: `persistentclaimchallenge`
     - storage class: manual
-    - ReadWriteOnce permission
 
-0. Create a deployment named `day4challenge` using an `nginx` image. Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pods of the `day4challenge` deployment. The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
+0. Create a Pod with the following:
+- name the Pod `day4challenge`
+- give the Pod the label `k8s: isawesome`
+- Use a `busybox:1.35.0` image
+- Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pods of the `day4challenge` deployment
+> The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
 
 #### SOLUTION
 
