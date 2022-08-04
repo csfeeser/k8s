@@ -36,3 +36,32 @@ Let's take some of the concepts we learned and apply them in some resources of y
 - Use a `nginx` image
 - Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo`.
 > The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
+
+<details>
+<summary>SOLUTION</summary>
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: day4challenge
+  labels:
+    k8s: isawesome
+spec:
+  containers:
+    - name: warmup
+      image: nginx
+      volumeMounts:
+      - mountPath: "/var/www/"
+        name: mypvc
+      - mountPath: "/data"
+        name: myconfig
+  volumes:
+    - name: mypvc
+      persistentVolumeClaim:
+        claimName: persistentclaimchallenge
+    - name: myconfig
+      configMap:
+        name: nintendo
+```
+</details>
