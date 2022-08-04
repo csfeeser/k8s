@@ -41,6 +41,34 @@ Let's take some of the concepts we learned and apply them in some resources of y
 <summary>SOLUTION</summary>
 
 ```yaml
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: persistentchallenge
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"    
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: persistentclaimchallenge
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
 apiVersion: v1
 kind: Pod
 metadata:
