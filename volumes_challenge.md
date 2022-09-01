@@ -32,42 +32,31 @@ Let's take some of the concepts we learned and apply them in some resources of y
 
 0. Create a Pod with the following:
 - name the Pod `day4challenge`
-- Use a `busybox:1.35.0` image
+- Use a `nginx` image
 - Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the `day4challenge` Pod
 > The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
 
 #### SOLUTION
 
 ```yaml
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: day4challenge
+  name: day4challenge2
 spec:
-  selector:
-    matchLabels:
-      app: nginx
-  replicas: 3
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.18.0
-        ports:
-        - containerPort: 80
-        volumeMounts:
-          - name: snes
-            mountPath: /data
-          - name: memcard
-            mountPath: /storage
-      volumes:
-      - name: snes
-        configMap:
-          name: nintendo
+  containers:
+  - name: dontmatter
+    image: nginx
+    volumeMounts:
+      - name: gamer
+        mountPath: /japan
       - name: memcard
-        persistentVolumeClaim:
-          claimName: persistentclaimchallenge
+        mountPath: /data
+  volumes:
+  - name: gamer
+    configMap:
+      name: nintendo
+  - name: memcard # doesn't matter any name
+    persistentVolumeClaim:
+      claimName: persistentclaimchallenge
 ```
