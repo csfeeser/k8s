@@ -37,6 +37,7 @@ Let's take some of the concepts we learned and apply them in some resources of y
 - Mount BOTH the PVC `persistentclaimchallenge` AND configmap `nintendo` into the pods of the `day4challenge` deployment
 > The `mountPath` location is up to you, but the Pod status must be `RUNNING` to complete the challenge :)
 
+<!--
 #### SOLUTION
 
 ```yaml
