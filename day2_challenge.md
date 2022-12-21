@@ -4,7 +4,11 @@
 
 ### Procedure
 
-1. Create a UserAccount with your name! For now, let's call him `tony`.
+1. Create a new namespace named `challenge`.
+
+    `kubectl create ns challenge`
+
+0. Create a UserAccount with your name! For now, let's call him `tony`.
 
 0. Give `tony` the following permissions:
 
