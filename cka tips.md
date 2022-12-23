@@ -39,5 +39,60 @@ You WILL have to:
 
 14. You actually get TWO attempts at the CKA exam! If you fail the first time, try to figure out what you did wrong and then retake it. HOT TIP: the questions will be the same the second time you take the exam!
 
+## EXAMPLE QUESTIONS
 
+QUESTION 1:
+Create a clusterrole that allows for specific verb(s) and resources: create pods, secrets, deployments
+Create a ServiceAccount named "bob"
+Connect "bob" to the clusterrole (so use a clusterrolebinding)
+
+QUESTION 2:
+Use kubeadm to upgrade a master node from 1.24.1 to 1.24.2.
+Also upgrade kubectl and kubelet.  it's in the upgrade page
+Literally steps from here: https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/#upgrading-control-plane-nodes
+
+QUESTION 3:
+Scale a deployment up to 4 replicas
+
+QUESTION 4:
+Add an additional container to an existing deployment's pods.
+Make the new containerPort 80.
+Create a nodePort service exposing that specific container via port 80.
+
+QUESTION 5:
+Take an etcd snapshot and save it to a specified place. cacert, cert, and key are provided. See the second command down from this link: https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#snapshot-using-etcdctl-options
+
+Restore an existing snapshot that was already on the machine. You'll still need the cacert, cert, and key flags you used to save the snapshot. The documentation is NOT clear about that.
+
+QUESTION 6:
+Make a PV, make a PVC. Specs are provided, be sure you can find a PV manifest that uses "hostPath"
+Mount PVC as volume to a Pod.
+
+QUESTION 7:
+Just make a single PV, nothing else to it. Be sure you can find a PV manifest that uses "hostPath"
+
+QUESTION 8:
+Make a pod with two containers. Easy.
+
+QUESTION 9:
+Create a network policy with the following:
+  - create on namespace "foo"
+  - add rules to the networkpolicy that states:
+       ○ all pods in "foo" can only receive traffic from pods in namespace "bar" on port 90210. It was definitely NAMESPACE SPECIFIC, so for podselector make the value "{}" for all pods in that namespace.
+
+QUESTION 10:
+Count how many nodes are "ready" and write that number to a file.
+
+QUESTION 11:
+Of all pods that have a specific label, which one has the highest CPU consumption? Write the name of that Pod to a file.
+
+QUESTION 12:
+Display logs from a specific pod. Write all log lines that contain "file-not-found" to a specific file.
+
+QUESTION 13:
+Create an ingress object that exposes an existing service named "hello" at path "/hello" at port 80. They include a command to test if it works.
+
+QUESTION 14:
+This question was totally taken from their own docs.
+https://kubernetes.io/docs/concepts/cluster-administration/logging/#streaming-sidecar-container
 
