@@ -4,17 +4,17 @@
 
 3. In Chad's experience, you will NOT have to build a cluster from scratch on the CKA.
 You WILL have to:
-  • add an additional node
-  • upgrade a node from an older version of K8s to a newer one
-  • create a snapshot of etcd and restore etcd to a previous snapshot
-  • all of these steps are in the kubernetes.io page. Know where these steps are in advance of taking the exam!
+    - add an additional node
+    - upgrade a node from an older version of K8s to a newer one
+    - create a snapshot of etcd and restore etcd to a previous snapshot
+    - all of these steps are in the kubernetes.io page. Know where these steps are in advance of taking the exam!
 
 4. Never memorize what you can copy/paste :)
 
 5. shortcuts for resource creation (all --tags are OPTIONAL, only set what you need)
-    • kubectl run PODNAME --image=IMAGE_NAME --labels="app=hazelcast,env=prod" --env="DNS_DOMAIN=cluster"
-    • kubectl create deploy DEPLOYMENTNAME --image=IMAGE_NAME --replicas=NUMBER
-    • type "kubectl create svc --help | less" to see a list of quick commands to create these objects on the fly!
+    - kubectl run PODNAME --image=IMAGE_NAME --labels="app=hazelcast,env=prod" --env="DNS_DOMAIN=cluster"
+    - kubectl create deploy DEPLOYMENTNAME --image=IMAGE_NAME --replicas=NUMBER
+    - type "kubectl create svc --help | less" to see a list of quick commands to create these objects on the fly!
 
 6. Use kubectl describe against problematic objects! "kubectl get events" is another way to get an overview of anything that might be wrong
 
@@ -27,9 +27,9 @@ You WILL have to:
 10. questions involving readiness/liveness probes will NOT mention "readiness/liveness probes" on the exam. It will say something like "make sure that the container restarts after it fails to respond to a cat command against /tmp/whatever"
 
 11. Need to mount something like a configmap/secret/persistentvolumeclaim to a Pod? Do the following:
-  • search kubernetes.io for "configmap" or "secret" or "persistent volume claim" and open that page
-  • press "ctrl f" to open a search bar; type in "kind: Pod"
-  • this will zoom you to the part of the page where there is a Pod manifest that already has that object written in as a volume!
+    - search kubernetes.io for "configmap" or "secret" or "persistent volume claim" and open that page
+    - press "ctrl f" to open a search bar; type in "kind: Pod"
+    - this will zoom you to the part of the page where there is a Pod manifest that already has that object written in as a volume!
 
 12. Go to this link and scroll down. The first manifest you find is one you're likely to see on the CKA exam. Study it carefully and be sure you understand what the Pod is doing! Google "emptyDir kubernetes" as well. https://kubernetes.io/docs/concepts/cluster-administration/logging/#streaming-sidecar-container
 
