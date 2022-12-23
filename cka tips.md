@@ -37,8 +37,7 @@ You WILL have to:
 13. For Network Policies, you WILL be expected to write a policy that allows specific rules for ingress/egress. Make sure you study the manifest in the documentation. You can edit it to match any policy you'll be expected to write!
     - https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource
 
-
-
+14. You actually get TWO attempts at the CKA exam! If you fail the first time, try to figure out what you did wrong and then retake it. HOT TIP: the questions will be the same the second time you take the exam!
 
 
 
