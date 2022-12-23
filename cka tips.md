@@ -12,11 +12,11 @@ You WILL have to:
 4. Never memorize what you can copy/paste :)
 
 5. shortcuts for resource creation (all --tags are OPTIONAL, only set what you need)
-    - kubectl run PODNAME --image=IMAGE_NAME --labels="app=hazelcast,env=prod" --env="DNS_DOMAIN=cluster"
-    - kubectl create deploy DEPLOYMENTNAME --image=IMAGE_NAME --replicas=NUMBER
-    - type "kubectl create svc --help | less" to see a list of quick commands to create these objects on the fly!
+    - `kubectl run PODNAME --image=IMAGE_NAME --labels="app=hazelcast,env=prod" --env="DNS_DOMAIN=cluster"`
+    - `kubectl create deploy DEPLOYMENTNAME --image=IMAGE_NAME --replicas=NUMBER`
+    - type `kubectl create svc --help | less` to see a list of quick commands to create these objects on the fly!
 
-6. Use kubectl describe against problematic objects! "kubectl get events" is another way to get an overview of anything that might be wrong
+6. Use `kubectl describe` against problematic objects! `kubectl get events` is another way to get an overview of anything that might be wrong
 
 7. ALWAYS copy/paste the name of images! One typo and you will get an error. Expect to see an "nginxxx" on your exam :)
 
@@ -24,7 +24,7 @@ You WILL have to:
 
 9. A lot of questions on the CKA will have you write something a specific file. "Put the name of the pod consuming the most resources in the file /tmp/bigolpod.txt"
 
-10. questions involving readiness/liveness probes will NOT mention "readiness/liveness probes" on the exam. It will say something like "make sure that the container restarts after it fails to respond to a cat command against /tmp/whatever"
+10. Questions involving readiness/liveness probes will NOT mention "readiness/liveness probes" on the exam. It will say something like "make sure that the container restarts after it fails to respond to a cat command against /tmp/whatever"
 
 11. Need to mount something like a configmap/secret/persistentvolumeclaim to a Pod? Do the following:
     - search kubernetes.io for "configmap" or "secret" or "persistent volume claim" and open that page
