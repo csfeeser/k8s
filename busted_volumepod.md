@@ -90,6 +90,7 @@ The garfield volume's mountPath is /etc/nginx/, which overwrites EVERYTHING in t
 </details>
 
 
+<!--
 # SOLUTION
 
 ```yaml
