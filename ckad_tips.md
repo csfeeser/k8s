@@ -20,7 +20,7 @@
     - search kubernetes.io for "configmap" or "secret" or "persistent volume claim" and open that page
     - press "ctrl f" to open a search bar; type in "kind: Pod"
     - this will zoom you to the part of the page where there is a Pod manifest that already has that object written in as a volume!
-0. Go to this link and scroll down. The first manifest you find is one you're likely to see on the CKA exam. Study it carefully and be sure you understand what the Pod is doing! Google "emptyDir kubernetes" as well.
+0. Go to this link and scroll down. The first manifest you find is one you're likely to see on the CKAD exam. Study it carefully and be sure you understand what the Pod is doing! Google "emptyDir kubernetes" as well.
     - https://kubernetes.io/docs/concepts/cluster-administration/logging/#streaming-sidecar-container
 0. For Network Policies, you WILL be expected to write a policy that allows specific rules for ingress/egress. Make sure you study the manifest in the documentation. You can edit it to match any policy you'll be expected to write!
     - https://kubernetes.io/docs/concepts/services-networking/network-policies/#networkpolicy-resource
