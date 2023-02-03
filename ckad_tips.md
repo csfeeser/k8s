@@ -14,7 +14,7 @@
 0. Name your manifest files something you'll be able to easily find when you return to a task. If task 3 asks you to create a deployment, write your manifest in a file something like `3-deploy.yml`.
 0. ALWAYS copy/paste the name of images! One typo and you will get an error. Expect to see an "nginxxx" on your exam :)
 0. The CKAD exam WILL ask you "which pod in the cluster is consuming the most resources"-- however, the exam will NOT say "use kubectl top to figure that out". You will be expected to just know to use that tool. The metrics server will ALREADY be installed on your ckad exam cluster, so you will be able to use it without any setup!
-0. A lot of questions on the CKA will have you write something a specific file. "Put the name of the pod consuming the most resources in the file /tmp/bigolpod.txt"
+0. A lot of questions on the CKAD will have you write something a specific file. "Put the name of the pod consuming the most resources in the file /tmp/bigolpod.txt"
 0. Questions involving readiness/liveness probes will NOT mention "readiness/liveness probes" on the exam. It will say something like "make sure that the container restarts after it fails to respond to a cat command against /tmp/whatever"
 0. Need to mount something like a configmap/secret/persistentvolumeclaim to a Pod? Do the following:
     - search kubernetes.io for "configmap" or "secret" or "persistent volume claim" and open that page
