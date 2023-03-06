@@ -12,6 +12,6 @@ The following are challenges using topics we learned yesterday! Give your best s
 
 0. Confirm your pod was created in the correct namespace (`challenge`) using a `kubectl get` command.
 
-  > BONUS: save the output from your `kubectl get` command to the file `/tmp/challengeoutput.txt`
+      > BONUS: save the output from your `kubectl get` command to the file `/tmp/challengeoutput.txt`
 
 0. Put a resource quota on your new `challenge` namespace! Ensure that there is a hard limit of `1` cpu and `1Gi` of memory on the `challenge` namespace!
