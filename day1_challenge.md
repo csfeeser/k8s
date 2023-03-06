@@ -8,20 +8,10 @@ The following are challenges using topics we learned yesterday! Give your best s
 
 1. Create a new namespace called *challenge*
 
-0. Create a context named *challenge-context* that uses the following:
-
-        cluster: kubernetes-the-alta3-way
-        namespace: challenge
-        user: admin
-
-0. Make *challenge-context* your current context. **ALL OBJECTS SHOULD BE CREATED IN THIS CONTEXT!**
-
 0. Create a single container pod named `challengepod`. Use `nginx` as the container image.
 
 0. Confirm your pod was created in the correct namespace (`challenge`) using a `kubectl get` command.
 
+  > BONUS: save the output from your `kubectl get` command to the file `/tmp/challengeoutput.txt`
+
 0. Put a resource quota on your new `challenge` namespace! Ensure that there is a hard limit of `1` cpu and `1Gi` of memory on the `challenge` namespace!
-
-## When you are finished, return to the correct context!
-
-`student@bchd:~$` `kubectl config use-context kubernetes-the-alta3-way`
