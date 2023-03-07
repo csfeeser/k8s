@@ -1,6 +1,8 @@
 # Kubernetes Essentials Day 1 Challenge
 
+<!--
 <img src="https://pbs.twimg.com/media/FYhiT-BWAAAA2FB.jpg" width="200"/>
+-->
 
 ### Procedure
 
