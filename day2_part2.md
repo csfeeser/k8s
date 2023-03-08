@@ -38,28 +38,27 @@ Create a pod named `ckaddemo` which has two containers- each container should do
   
 </details>
 
-<!--
-
+### SOLUTION:
+  
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: midday-challenge
+  name: ckaddemo
 spec:
   containers:
-  - name: bizzeebox
-    image: busybox:1.35.0
-    command: [ "sh", "-c", "sleep 1h" ]
-    resources:
-      requests:
-        cpu: 300m
-    securityContext:
-      runAsUser: 1000
-  - name: engine-x
+  - name: nginx1
     image: nginx
     resources:
       limits:
-        cpu: 300m
-        memory: 512Mi
+        cpu: "300m"
+        memory: "512Mi"
+  - name: nginx2
+    image: busybox:1.35.0
+    resources:
+      requests:
+        cpu: "300m"
+    command: [ "sh", "-c", "sleep 1h" ]
+    securityContext: 
+      runAsUser: 1000
 ```
--->
