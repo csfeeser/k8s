@@ -23,6 +23,7 @@ Create a pod named `ckaddemo` which has two containers- each container should do
 - second container: 
     - uses the `busybox:1.35.0` image
     - container must be guaranteed `300m` cpu.
+    - executes the following command: [ "sh", "-c", "sleep 1h" ]
     - guarantee that this container runs as user `1000`
         > test this with a `kubectl exec -it ckaddemo -- sh` and run a `whoami` command.
 
@@ -30,7 +31,7 @@ Create a pod named `ckaddemo` which has two containers- each container should do
 <summary>HINT</summary>
 <br>
 
-- container is only allowed to consume `300m` cpu and `512Mi` memory **<-- add a LIMIT**                                                                       
+- container is only allowed to consume `300m` cpu and `512Mi` memory **<-- add a LIMIT**                                                   - command: [ "sh", "-c", "sleep 1h" ]                    
 - container must be guaranteed `300m` cpu. **<-- add a REQUEST**
 - guarantee that this container runs as user `1000` **<-- add a SECURITY CONTEXT**                                                                           
   
