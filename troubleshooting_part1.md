@@ -28,17 +28,22 @@ Recommended commands:
 <details>
 <summary>Hint #1</summary>
 <br>
-kubectl get pods -n fail02  
+    
+`kubectl get pods -n fail02`  
+
 </details>
 
 <details>
 <summary>Hint #2</summary>
 <br>
-kubectl describe pod failingpod02 -n fail02
+    
+`kubectl describe pod failingpod02 -n fail02`
+
+<bold>AND/OR</bold>
 <br>
-    <bold>AND/OR</bold>
-<br>
-kubectl get events -n fail02  
+
+`kubectl get events -n fail02`
+    
 </details>
 
 <details>
@@ -50,7 +55,8 @@ There is a typo in the image name!
 <details>
 <summary>Solution</summary>
 <br>
-kubectl edit pod failingpod02 -n fail02  
-<br>
-Change line 18.  
+
+`kubectl edit pod failingpod02 -n fail02`
+ 
+Change line 18 from **nginxx** to **nginx**
 </details>
