@@ -8,7 +8,7 @@
 Below is a familiar looking Pod manifest... you used this when creating a Pod with an `nginx` image and three mounted configmaps yesterday. However, it is now riddled with errors!... the type of errors that are very common and you're likely to encounter :) 
 
 
-**Copy/paste the entire block of commands below and paste them to your command line.**  
+**Copy the ENTIRE block of commands below and paste them in one big chunk to your command line. Then press enter.**  
 
 ```bash
 kubectl delete cm --all
@@ -38,11 +38,11 @@ spec:
     - containerPort: 80
     volumeMounts: 
     - name: garfield
-      mountPath: /etc/nginx/nginx.conf
+      mountPath: /etc/nginx
     - name: odie
       mountPath: /var/www/index.html
       subPath: index.html
-    - name: jon
+    - name: john
       mountPath: /var/www/static/nginx.txt
       subPath: nginx.txt
   volumes:
@@ -90,35 +90,38 @@ The garfield volume's mountPath is /etc/nginx/, which overwrites EVERYTHING in t
 </details>
 
 
-<!--
-# SOLUTION
+<details>
+<summary>SOLUTION</summary>
+<br>
+
+
 
 ```yaml
 ---
-apiVersion: v1 # put a whitespace after :
-kind: Pod # capitalize kind!
+apiVersion: v1                               # put a whitespace after the ":"
+kind: Pod                                    # capitalize the P in Pod!
 metadata:
   name: nginx-configured
 spec:
   containers:
   - name: nginx
-    image: nginx:1.18.0 # typo in image name caused ErrImgPull
+    image: nginx:1.18.0                      # typo in image name caused ErrImgPull
     ports:
     - containerPort: 80
     volumeMounts: 
     - name: garfield
       mountPath: /etc/nginx/nginx.conf
-      subPath: nginx.conf # needs subpath!
+      subPath: nginx.conf                    # needs subpath!
     - name: odie
       mountPath: /var/www/index.html
       subPath: index.html
-    - name: jon
+    - name: jon                              # volume is jon, not john!
       mountPath: /var/www/static/nginx.txt
       subPath: nginx.txt
   volumes:
   - name: garfield
     configMap:
-      name: nginx-conf # wrong configmap name!
+      name: nginx-conf                       # wrong configmap name!
   - name: odie
     configMap:
       name: index-file 
@@ -126,4 +129,7 @@ spec:
     configMap:
       name: nginx-txt
 ```
--->
+
+  
+  
+</details>
