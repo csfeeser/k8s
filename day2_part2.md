@@ -39,6 +39,9 @@ Create a pod named `ckaddemo` which has two containers- each container should do
 </details>
 
 ### SOLUTION:
+
+<details>
+<summary>Click here!</summary>
   
 ```yaml
 apiVersion: v1
@@ -62,3 +65,4 @@ spec:
     securityContext: 
       runAsUser: 1000
 ```
+</details>
