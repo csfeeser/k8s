@@ -20,3 +20,9 @@ The objective of this challenge is to fix broken stuff. To simulate this, you'll
         failingpods   2/3     2            2           1m
     
 0. One of our replicas is failing to launch! Identify the problem and attempt a solution!
+
+Suggested commands:
+- Because this is in a different namespace, follow up all kubectl commands with `-n <NAMESPACE-NAME>`
+- `kubectl describe <KIND> <NAME>`
+- `kubectl edit <KIND> <NAME>`
+- `kubectl get events`
