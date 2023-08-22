@@ -1,6 +1,6 @@
 # Troubleshooting Challenge, Part 2!
 
-<img src="https://www.jeffgeerling.com/sites/default/files/images/kubectl-meme-image.jpg" width="300"/>
+<img src="https://i.redd.it/hohjszejni4b1.jpg" width="300"/>
 
 Knowing how to troubleshoot is a skill that is essential to becoming a proficient Kubernetes Developer or Administrator.
 
