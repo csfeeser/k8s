@@ -1,3 +1,5 @@
+# Working with Helm
+
 | Command Syntax                           | Description                                                                                                                 |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | `helm repo add [repo-name] [repo-url]`    | Adds a new Helm chart repository.                                                                                           |
@@ -12,6 +14,10 @@
 | `helm get values [release-name]`          | Retrieves the custom values that were set during the installation or last upgrade of a specific release.                     |
 | `helm upgrade [release-name] [chart]`     | Upgrades a Helm release to a new version of a chart or updates its configuration using a new chart.                         |
 
+## Helm Practice Challenge:
+## OPTION 1: Go to any previous lab, task, or challenge we completed in class where you already have written manifests. Place those manifests in a chart, then convert them to templates populated by a `values.yaml` file.
+## OPTION 2: Take the demo we did in class and add more features to it! Code is included below.
+
 Here is the breakdown of the demo we did in class:
 
 ```
@@ -24,7 +30,7 @@ Here is the breakdown of the demo we did in class:
 └── values.yaml
 ```
 
-## /<chartname>/values.yaml
+## /\<chartname\>/values.yaml
 
 You may name your variables in `values.yaml` as whatever you like, as long as it matches what is in your templates!
 
@@ -50,7 +56,7 @@ myimage:
   imagetag: 1.19.6
 ```
 
-### /<chartname>/templates/configmap.yaml
+### /\<chartname\>/templates/configmap.yaml
 
 ```yaml
 apiVersion: v1
@@ -62,7 +68,7 @@ data:
     {{- .Values.herodata | nindent 4 }}
 ```
 
-### /<chartname>/templates/deploy.yaml
+### /\<chartname\>/templates/deploy.yaml
 
 ```yaml
 apiVersion: apps/v1
