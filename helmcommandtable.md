@@ -11,3 +11,86 @@
 | `helm show values [chart]`                | Displays the default values that come with the chart itself. These values are in the chart's `values.yaml` file.             |
 | `helm get values [release-name]`          | Retrieves the custom values that were set during the installation or last upgrade of a specific release.                     |
 | `helm upgrade [release-name] [chart]`     | Upgrades a Helm release to a new version of a chart or updates its configuration using a new chart.                         |
+
+Here is the breakdown of the demo we did in class:
+
+```
+.
+├── Chart.yaml
+├── charts
+├── templates
+│   ├── configmap.yaml
+│   └── deploy.yml
+└── values.yaml
+```
+
+## /<chartname>/values.yaml
+
+You may name your variables in `values.yaml` as whatever you like, as long as it matches what is in your templates!
+
+```yaml
+# labels
+demlabelstho:
+  datkey: foxtrot
+  datvalue: golf
+
+# replica count
+howmanyyouwant: 3
+
+# values in the configmap (names of heroes)
+herodata: |
+  Wolverine
+  Jean Grey
+  Storm
+  Professor X
+
+# container image info
+myimage:
+  imagename: nginx
+  imagetag: 1.19.6
+```
+
+### /<chartname>/templates/configmap.yaml
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hero
+data:
+  dchero.txt: |
+    {{- .Values.herodata | nindent 4 }}
+```
+
+### /<chartname>/templates/deploy.yaml
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    {{ .Values.demlabelstho.datkey }}: {{ .Values.demlabelstho.datvalue }}
+spec:
+  replicas: {{ .Values.howmanyyouwant }}
+  selector:
+    matchLabels:
+      {{ .Values.demlabelstho.datkey }}: {{ .Values.demlabelstho.datvalue }}
+  template:
+    metadata:
+      labels:
+        {{ .Values.demlabelstho.datkey }}: {{ .Values.demlabelstho.datvalue }}
+    spec:
+      volumes:
+        - name: foobar
+          configMap:
+            name: hero
+      containers:
+      - name: {{ .Values.myimage.imagename }}
+        image: {{ .Values.myimage.imagename }}:{{ .Values.myimage.imagetag }}
+        volumeMounts:
+          - name: foobar
+            mountPath: /data
+        ports:
+        - containerPort: 80
+```
