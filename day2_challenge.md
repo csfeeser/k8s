@@ -1,6 +1,13 @@
-# Warmup- Add a User!
+# Warmup with RBAC- Add a User!
 
 <img src="https://www.meme-arsenal.com/memes/c62e21f60e1e8d5aa4d78210659a68e8.jpg" width="400"/>
+
+### Objective
+
+Create a new user for your cluster and endow them with the permissions they need! Use the following labs to help you:
+
+- [45. 💻1️⃣ Role Based Access Control](https://live.alta3.com/content/cka/labs/content/kubernetes/RBAC/RBAC-authentication-authorization-lab.html)
+- [46. 💻2️⃣ RBAC Distributing Access](https://live.alta3.com/content/cka/labs/content/kubernetes/RBAC/RBAC-Distributing-Access-lab.html)
 
 ### Procedure
 
