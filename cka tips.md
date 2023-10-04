@@ -47,7 +47,7 @@ Create a ServiceAccount named "bob"
 Connect "bob" to the clusterrole (so use a clusterrolebinding)
 
 QUESTION 2:
-Use kubeadm to upgrade a master node from 1.24.1 to 1.24.2.
+Use kubeadm to upgrade a master node from 1.2a.b to 1.2c.d
 Also upgrade kubectl and kubelet.  it's in the upgrade page
 Literally steps from here: https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/#upgrading-control-plane-nodes
 
