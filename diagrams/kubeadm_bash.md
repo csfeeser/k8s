@@ -12,7 +12,7 @@ The process that I will walk you through here will allow you to stand up a clust
 Kubernetes requires the installation of several packages and their dependencies, which will require you to use root privileges. Therefore, because nobody likes typing sudo repetitively, just become the root user.
 
 ```
-$ sudo su
+sudo -i
 ```
 
 Now create a bash script named `kubernetes_setup.sh` to run the following commands:
@@ -120,13 +120,13 @@ systemctl enable kubelet.service
 Now run your script!
 
 ```
-$ sh kubernetes_setup.sh
+sh kubernetes_setup.sh
 ```
 
 This will set up Kubernetes and its dependencies. After it finishes, initialize your controller node:
 
 ```
-$ kubeadm init
+kubeadm init
 ```
 
 ## Setting up Kubeconfig
@@ -148,7 +148,7 @@ kubectl get pod -A
 Without a Container Network Interface (CNI) you will not be able to create pods. However, you can't create any pods at the moment because your node is tainted! Remove it.
 
 ```
-$ kubectl taint node --all "node-role.kubernetes.io/control-plane-"
+kubectl taint node --all "node-role.kubernetes.io/control-plane-"
 ```
 
 You may now install your Network Plugin. For this cluster we will use Weave!
