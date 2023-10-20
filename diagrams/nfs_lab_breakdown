@@ -1,0 +1,38 @@
+WHAT JUST HAPPENED?? 💻 Persistent Storage with NFS
+
+Part 1: 
+- get an NFS server deployment running inside our cluster
+- put a server pod on every node so the server can be accessed from anywhere in the cluster
+- ...but it's not ready to be used yet!
+
+Part 2:
+- create a storageClass that allows persistent volumes to use the NFS server.
+
+Part 3:
+- make a PV, PVC, and Pod- then make a test file inside the Pod. Then test that the file is accessible from any node in the cluster!
+
+
+Steps 1-13:
+
+Install the NFS server. Break down what got installed.
+• the NFS server itself, which is in a deployment
+• a ServiceAccount to manage the NFS server as well as all the permissions it needs to do so (RBAC)
+• a deployment that the ServiceAccount uses to manage the NFS server
+• the CSI driver for NFS storage, enabling this storage to work
+• A DaemonSet that puts a pod on every node, enabling the NFS server to be accessed from every node.
+
+Step 15:
+• Install Jinja2, a templating engine that allows you to "fill in the blanks" on template files. Handy for populating files from the command line.
+
+Steps 16-19:
+• Insert the IP address that leads to your NFS server into a StorageClass manifest.
+• Create the StorageClass for the NFS storage we've set up. Allows our cluster to now use this type of storage.
+
+Steps 20-25:
+• Create a PersistentVolume, a PersistentVolumeClaim, and a Pod that mounts that PVC.
+
+Steps 26-29:
+• Confirm that the PVC mountPath in the Pod is connected to our NFS server.
+• Create a file in that mountPath.
+• Send a "cat file" command to one of the NFS server Pods to confirm the file is saved at that location and our storage solution works!
+
