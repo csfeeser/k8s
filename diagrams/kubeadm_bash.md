@@ -19,15 +19,10 @@ Now create a bash script named `kubernetes_setup.sh` to run the following comman
 
 ```bash
 #!/bin/bash
-# common.sh
-# copy this script and run in all master and worker nodes
-#i1) Switch to root user [ sudo -i]
 
-#2) Disable swap & add kernel settings
-
+# Disable swap & add kernel settings
 swapoff -a
 sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
-
 
 #3) Add  kernel settings & Enable IP tables(CNI Prerequisites)
 
@@ -78,36 +73,29 @@ apt-get install containerd.io -y
 containerd config default > /etc/containerd/config.toml
 
 # Run following command to update configure cgroup as systemd for contianerd.
-
 sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
 
 # Restart and enable containerd service
-
 systemctl restart containerd
 systemctl enable containerd
 
 #5) Installing kubeadm, kubelet and kubectl
 
 # Update the apt package index and install packages needed to use the Kubernetes apt repository:
-
 apt-get update
 apt-get install -y apt-transport-https ca-certificates curl
 
 # Download the Google Cloud public signing key:
-
 curl -fsSL https://dl.k8s.io/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg
 
 # Add the Kubernetes apt repository:
-
 echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
 # Update apt package index, install kubelet, kubeadm and kubectl, and pin their version:
-
 apt-get update
 apt-get install -y kubelet kubeadm kubectl
 
 # apt-mark hold will prevent the package from being automatically upgraded or removed.
-
 apt-mark hold kubelet kubeadm kubectl
 
 # Enable and start kubelet service
@@ -139,8 +127,6 @@ exit
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-#to verify, if kubectl is working or not, run the following command.
-kubectl get pod -A
 ```
 
 ## Deploy a Network Plugin
@@ -155,7 +141,6 @@ You may now install your Network Plugin. For this cluster we will use Weave!
 
 ```bash
 kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
-#verify if weave is deployed successfully
 ```
 
 You may now want to check that all your Pods are in a running state.
