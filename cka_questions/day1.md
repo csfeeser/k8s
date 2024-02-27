@@ -55,7 +55,7 @@ metadata:
 spec:
   containers:
   - name: web-container
-    image: nginx:latest
+    image: nginx:1.23.4
     ports:
     - containerPort: 80
   - name: sidecar-container
