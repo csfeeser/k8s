@@ -11,16 +11,24 @@ Below is a question identical to one you may encounter on the CKA exam! Let us a
 
     `student@bchd~:$` `kubectl run mystery-pod --image=nginx`
    
-3. **Example CKA Task Description**: 
+2. **Example CKA Task Description**: 
     - There is an existing pod named `mystery-pod` within your cluster.
     - Your task is to modify this pod by adding an additional container. This new container should serve a simple HTTP service on `containerPort 80`.
     - You do not have access to the original manifest file for the pod.
    
-### Details for New Container:
-- **Container Name**: `simpleservice-container`
-- **Container Image**: `mhausenblas/simpleservice:0.5.0`
-- **Container Port**: `9876`
-  
+3. Details for New Container:
+    - **Container Name**: `simpleservice-container`
+    - **Container Image**: `mhausenblas/simpleservice:0.5.0`
+    - **Container Port**: `9876`
+
+<details><summary>Help me Chadly-wan Kenobi- how do I create a manifest from a running K8s resource?</summary>
+<br>
+Here you go, Padawan-
+
+`student@bchd~:$` `kubectl get pod mystery-pod -o yaml > 3-pod.yaml`
+
+</details>   
+
 ### Solution:
 
 <details><summary>Click to reveal the solution!</summary>
