@@ -1,5 +1,20 @@
 ## Kubectl Get Challenges!
 
+#### Cheat Sheet
+
+| Command / Option            | Description                                                                                         |
+|-----------------------------|-----------------------------------------------------------------------------------------------------|
+| `kubectl get pods`          | Lists all pods in the namespace.                                                                    |
+| `-n <namespace>`            | Specifies the namespace to look in.                                                                 |
+| `--all-namespaces`          | Lists resources in all namespaces.                                                                  |
+| `-l <label>=<value>`        | Filters resources by label.                                                                         |
+| `-o wide`                   | Outputs in wide format, including additional information like node name and IP addresses.           |
+| `-o yaml`                   | Outputs the resource information in YAML format, useful for seeing configurations including labels.|
+| `--show-labels`             | Shows all labels of listed resources.                                                               |
+| `kubectl get daemonset`     | Lists all daemonsets in the namespace.                                                              |
+| `kubectl get deployment`    | Lists all deployments in the namespace.                                                             |
+| `kubectl get rs`            | Lists all ReplicaSets in the namespace.                                                             |
+
 ### Challenge 1: List all pods in the `default` namespace that are running.
 
 <details>
