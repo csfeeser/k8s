@@ -8,7 +8,7 @@ Your task will use concepts we learned about RBAC in Kubernetes!
 - **Role**: Create a Role named `custom-role` in the namespace `default`. This Role should have permissions to:
   - **get**, **list**, and **watch** Pods within the `default` namespace.
 - **RoleBinding**: Create a RoleBinding named `custom-role-binding` in the namespace `default`. This RoleBinding should bind the `custom-role` to the `custom-service-account`.
-    - A VERY NON-CKA WARNING: serviceaccounts can be bound to roles just as users can, but with one sifference:
+    - A VERY NON-CKA WARNING: serviceaccounts can be bound to roles just as users can, but with one difference:
 
 ```yaml
 subjects:
