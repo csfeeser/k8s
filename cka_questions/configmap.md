@@ -23,8 +23,19 @@ Your task involves creating a ConfigMap in Kubernetes from a file containing a l
    - Create a ConfigMap named `dc-comic-heroes` from the `dc-heroes.txt` file.
 
 3. **Deploy a Pod**:
-   - Deploy a Pod named `nginx-dc-comics`.
-   - The Pod should run the `nginx` image.
+   - Use the following pod manifest:
+   
+   ```yaml
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: nginx-dc-comics
+   spec:
+     containers:
+     - name: nginx-container
+       image: nginx
+   ```
+   
    - Mount the `dc-comic-heroes` ConfigMap to the `/dc-comics` directory in the container.
 
 Ensure that the Pod is correctly configured to serve the content of the mounted ConfigMap. You can confirm it with the following command:
