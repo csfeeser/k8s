@@ -89,7 +89,3 @@ spec:
 Apply this manifest by saving it to a file, then running `kubectl apply -f <filename>.yaml`.
 
 </details>
-
----
-
-This challenge should give your students a practical task combining Kubernetes resource management with a bit of DC Comics fun, Chad! Let me know if you have any other requests.
