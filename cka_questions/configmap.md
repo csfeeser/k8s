@@ -1,5 +1,7 @@
 ## CKA Challenge: Creating and Mounting a ConfigMap with DC Comic Superheroes
 
+<img src="https://miro.medium.com/v2/resize:fit:640/1*1L6WPtVM2paIttHkG7x8CA.png" width="200"/>
+
 Your task involves creating a ConfigMap in Kubernetes from a file containing a list of DC Comic superheroes. You will first create this file using vim, and then create a ConfigMap using this file. Finally, you will deploy a basic Pod that runs Nginx and mounts this ConfigMap to a specific directory within the container.
 
 ### Requirements:
