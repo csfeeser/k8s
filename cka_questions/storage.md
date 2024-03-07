@@ -30,6 +30,20 @@ You are required to manually provision persistent storage for a future applicati
 3. **Validate your work:**
    - Verify that your PVC successfully binds to your PV.
 
+#### CHAD TIP:
+
+Storage questions on the CKA and CKAD will be exactly like this one. The secret to success is knowing where EXACTLY on `kubernetes.io` you can find the manifests. That's tricky, because there are several pages on PV/PVCs but only only has the correct manifest.
+
+<details>
+<summary>Click here for the correct link!</summary>
+<br>
+  
+[https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/](https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/)
+
+> Search `persistent volume pod` in the Kubernetes docs to get this on the first search result.
+
+</details>
+
 <details>
 <summary>Solution</summary>
 
