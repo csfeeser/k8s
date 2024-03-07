@@ -1,5 +1,9 @@
 ### CKA Task: Persistent Storage with `hostPath`
 
+<img src="https://miro.medium.com/v2/resize:fit:860/0*ebBbV6um7xCfbEod" width="200"/>
+
+
+
 #### Objective
 
 You are required to manually provision persistent storage for a future application deployment. Create a PersistentVolume (PV) using a `hostPath` and a PersistentVolumeClaim (PVC) that claims this volume.
