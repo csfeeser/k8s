@@ -51,7 +51,7 @@ Storage questions on the CKA and CKAD will be exactly like this one. The secret 
 <details>
 <summary>Solution</summary>
 
-1. **PersistentVolume YAML (`example-pv.yaml`):**
+1. **Manifest for both PV and PVC YAML (`storage.yaml`):**
 
 ```yaml
 apiVersion: v1
@@ -59,31 +59,25 @@ kind: PersistentVolume
 metadata:
   name: example-pv
 spec:
+  storageClassName: manual
   capacity:
     storage: 1Gi
-  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Retain
-  storageClassName: manual
   hostPath:
-    path: /mnt/data
-```
-
-2. **PersistentVolumeClaim YAML (`example-pvc.yaml`):**
-
-```yaml
+    path: "/mnt/data"
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: example-pvc
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
-  storageClassName: manual
 ```
 
 To apply these configurations, use the `kubectl apply -f <filename>.yaml` command for each YAML file.
