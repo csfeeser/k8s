@@ -32,7 +32,7 @@ You are required to manually provision persistent storage for a future applicati
 
 #### CHAD TIP:
 
-Storage questions on the CKA and CKAD will be exactly like this one. The secret to success is knowing where EXACTLY on `kubernetes.io` you can find the manifests. That's tricky, because there are several pages on PV/PVCs but only only has the correct manifest.
+Storage questions on the CKA and CKAD will be exactly like this one. The secret to success is knowing where EXACTLY on `kubernetes.io` you can find the manifests. That's tricky, because there are several pages on PV/PVCs but only one has the correct manifest.
 
 <details>
 <summary>Click here for the correct link!</summary>
