@@ -1,5 +1,19 @@
 # LimitRange Syntax
 
+```mermaid
+graph LR
+    A(kubectl apply -f newpod.yml) --> B{"STOP! LimitRange check!\nGot requests/limits?"}
+    
+    B -->|No| C(POD CHANGE: default limits applied) --> D{"LimitRange check again:\nAre limits acceptable?"}
+    B -->|Yes| D
+    
+    D -->|No| E(POD FAILS)
+    D -->|Yes| F{"ResourceQuota check:\nEnough namespace space?"}
+    
+    F -->|No| E
+    F -->|Yes| G(POD IS CREATED!)
+```
+    
 Here's a simple table that outlines the types of controls you can set with `LimitRange` for different object types and what each control does:
 
 | Object Type        | Control                  | Description                                                                                              |
