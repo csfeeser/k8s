@@ -1,8 +1,8 @@
-# WARMUP: Make a Pod!
+# CKA Exam Tasks: Resource Management and Pod Creation!
 
 <img src="https://miro.medium.com/v2/resize:fit:800/0*0tk3EgSA2cJI3oPg.jpg" alt="Description of the image">
 
-The following are tasks written as they might appear in the CKAD exam! Remember, the CKAD is notorious for being vague in what specific tools are required to achieve these tasks... so if you'd like a hint about what the task is asking you to do, click the dropdown!
+The following are tasks written as they might appear in the CKA exam! Remember, the CKA is notorious for being vague in what specific tools are required to achieve these tasks... so if you'd like a hint about what the task is asking you to do, click the dropdown!
 
 ### Task 1
 Find which pod in your cluster is consuming the most memory. Write the name of that pod to a file named `/tmp/hogpod.txt`
