@@ -61,9 +61,28 @@ In namespace `cherry` you'll find two deployments named `pit` and `stem`. Both d
     
         `student@bchd:~$` `vim cherry-control.yaml`
     
-        <iframe src="https://batcat.alta3.com/alta3/kubernetes-the-alta3-way/main/labs/yaml/ctce-answers-network-policies.yaml" frameborder="0" style="width: 100%; height: 20em"></iframe>
-    
-        > Network Policies are tough. The **.spec.podSelector** key is where we identify the target of the Network Policy. Then, we write the **egress** policies, which indicate which connections we're allowing our target to egress to.
+        ```yaml
+        apiVersion: networking.k8s.io/v1
+        kind: NetworkPolicy
+        metadata:
+          name: cherry-control
+          namespace: cherry
+        spec:
+          podSelector:
+            matchLabels:
+              app: pit
+              version: v2
+          policyTypes:
+            - Egress
+          egress:
+          - to:
+            - podSelector:
+                matchLabels:
+                  app: stem
+                  version: v2
+        ```
+
+       > Network Policies are tough. The **.spec.podSelector** key is where we identify the target of the Network Policy. Then, we write the **egress** policies, which indicate which connections we're allowing our target to egress to.
         > Press **ESC** to exit **Insert Mode** and type `wq!` to write and quit out of vim.
     
     0. Push the manifest to your Kubernetes Cluster.
