@@ -1,22 +1,28 @@
 # Daily CKA Exam Warmup!
-Below is a question identical to one you may encounter on the CKA exam! Let us assume the following:
-- You completed lab 24 yesterday on your new VM and have a functioning cluster (if that isn't done please do it now)
+Below is a question identical to one you may encounter on the CKA exam! It's quite challenging, so take your time and use the hints if you need them!
 - It is TOTALLY legal to use the official [Kubernetes docs](https://kubernetes.io/docs/home/)!
 
 ---
 
-### Task 3: Add a Container to a Manifestless Pod
+### Task 2: Add a Container to a Manifestless Pod
 
-1. You'll execute a command to create a pod without using a manifest. The initial container in this deployment will run an Nginx server.
+#### SETUP
+
+1. Ensure you are in the correct context.
+
+    `student@bchd~:$` `kubectl config use-context kubernetes-the-alta3-way`
+
+2. On the actual exam this pod will already be running, but go ahead and create it yourself.
 
     `student@bchd~:$` `kubectl run mystery-pod --image=nginx`
+
+### Example CKA Task Description:
+
+  - There is an existing pod named `mystery-pod` within your cluster.
+  - Your task is to modify this pod by adding an additional container according to the specifications below.
+  - You do not have access to the original manifest file for the pod
    
-2. **Example CKA Task Description**: 
-    - There is an existing pod named `mystery-pod` within your cluster.
-    - Your task is to modify this pod by adding an additional container. This new container should serve a simple HTTP service on `containerPort 80`.
-    - You do not have access to the original manifest file for the pod.
-   
-3. Details for New Container:
+3. Details for new container:
     - **Container Name**: `simpleservice-container`
     - **Container Image**: `mhausenblas/simpleservice:0.5.0`
     - **Container Port**: `9876`
