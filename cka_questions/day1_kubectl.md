@@ -73,7 +73,3 @@ kubectl get nodes -o=jsonpath='{.items[0].status.nodeInfo.kubeletVersion}' > /tm
 ```
 
 </details>
-
----
-
-This format allows students to attempt each task on their own before revealing the correct command.
