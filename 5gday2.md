@@ -33,3 +33,29 @@
     `student@oss~$` `curl localhost:2224/tmnt`
     
     `student@oss~$` `curl localhost:2224/splinter`
+
+---
+
+<details>
+  <summary>Click to view the solution!</summary>
+
+  ```yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: wednesday-warmup
+  spec:
+    containers:
+    - name: pizzaparty
+      image: registry.gitlab.com/alta3-instructor/tmnt
+      ports:
+      - containerPort: 5055
+  ```
+
+  To apply this YAML file:
+
+  ```bash
+  kubectl apply -f pod.yaml
+  ```
+
+</details>
