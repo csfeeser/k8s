@@ -5,18 +5,18 @@
 1. Create a pod to the following specs!
 
   - IMAGE: `registry.gitlab.com/alta3-instructor/tmnt`
-  - POD NAME: `wednesday-warmup`
+  - POD NAME: `day2-warmup`
   - CONTAINER PORT: `5055`
   - CONTAINER NAME: `pizzaparty`
   - [Click here for a manifest you can use!](https://kubernetes.io/docs/concepts/workloads/pods/#using-pods)
   
-2. Confirm that your pod is running with a `kubectl get pod wednesday-warmup` command! It should be in a RUNNING state! (if it is in a `ContainerCreating` state try again in a few seconds)
+2. Confirm that your pod is running with a `kubectl get pod day2-warmup` command! It should be in a RUNNING state! (if it is in a `ContainerCreating` state try again in a few seconds)
 
 **WANT TO TRY SOMETHING COOL?**
 
 3. When you've confirmed the pod is running successfully, run this command:
 
-    `student@oss~$` `kubectl port-forward wednesday-warmup 2224:5055 --address=0.0.0.0`
+    `student@oss~$` `kubectl port-forward day2-warmup 2224:5055 --address=0.0.0.0`
 
     > This will use your `kubectl` connection to temporarily open a port-forward between your local machine and your pod!
   
