@@ -6,16 +6,16 @@
 
    `student@XYZ~$` `ssh node-1`
 
-2. Download the bash script.
+2. Become root.
+
+    `student@node-1~$` `sudo -i`
+   
+3. Download the bash script.
 
     `student@node-1~$` `wget https://raw.githubusercontent.com/csfeeser/k8s/master/steps1to26.sh`
 
-3. Run that bad boy. Hit `Enter` during any pink screens that pop up, answer `yes` to any yes/no questions, and when prompted for a password it is `alta3`.
+4. Run that bad boy. Hit `Enter` during any pink screens that pop up, answer `yes` to any yes/no questions, and when prompted for a password it is `alta3`.
 
-    `student@node-1~$` `bash steps1to26`
+    `student@node-1~$` `bash steps1to26.sh`
 
-4. Become root.
-
-    `student@node-1~$` `sudo -i`
-
-4. Do steps 27 onward normally inside [Lab 17. 💻 Join Node to Cluster](https://live.alta3.com/content/cka/labs/content/kubernetes/kubeadm/kubeadm-join-node-lab.html)
+5. Do steps 27 onward normally inside [Lab 17. 💻 Join Node to Cluster](https://live.alta3.com/content/cka/labs/content/kubernetes/kubeadm/kubeadm-join-node-lab.html)
