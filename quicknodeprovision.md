@@ -14,4 +14,8 @@
 
     `student@node-1~$` `bash steps1to26`
 
+4. Become root.
+
+    `student@node-1~$` `sudo -i`
+
 4. Do steps 27 onward normally inside [Lab 17. 💻 Join Node to Cluster](https://live.alta3.com/content/cka/labs/content/kubernetes/kubeadm/kubeadm-join-node-lab.html)
