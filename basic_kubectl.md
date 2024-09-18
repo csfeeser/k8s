@@ -41,7 +41,7 @@ This manifest defines a pod named **myfirstpod** that runs a container using the
 
 First, let's create (or update) the pod using the **apply** command. This will create the pod based on the manifest.
 
-`student@bchd~$` `kubectl apply -f ~/mycode/yaml/my_first_pod.yaml
+`student@bchd~$` `kubectl apply -f ~/mycode/yaml/my_first_pod.yaml`
 
 #### What if the pod is already running?
 - If you’ve already applied this manifest before, you might see something like this:
