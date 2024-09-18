@@ -1,5 +1,7 @@
 # Warmup: Fundamental `kubectl` Commands!
 
+<img src="https://github.com/user-attachments/assets/f389643a-5ccc-4bf1-8181-3338e96898ad" alt="FYhiT-BWAAAA2FB" height="300"/>
+
 Welcome back! This warmup is designed to help you review some **essential** `kubectl` commands. Some experienced Kubernetes folks might find this elementary, but if you're new to Kubernetes, these are **critical** skills worth practicing!
 
 Your goal is to understand and get hands-on practice with the following commands:
