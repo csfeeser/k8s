@@ -17,7 +17,7 @@ Run the following single command to download and execute the setup script:
 
 Make the following pod.
 
-`student@bchd~$` `vim day3warmup.yml`
+`student@bchd~$` `vim day4warmup.yml`
 
 ```yaml
 apiVersion: v1
@@ -38,7 +38,7 @@ spec:
 
 Once you’ve written this, go ahead and apply the manifest with:
 
-`student@bchd~$` `kubectl apply -f day3warmup.yml`
+`student@bchd~$` `kubectl apply -f day4warmup.yml`
 
 ### Step 3: Troubleshoot Why the Pod Isn’t Being Created
 
@@ -80,5 +80,5 @@ Read the error message you received! Use the power of `kubectl describe ns warmu
         memory: "512Mi"
     ```
 
-    Once you’ve updated the pod manifest, run `kubectl apply -f day3warmup.yml` again, and the pod should be created successfully.
+    Once you’ve updated the pod manifest, run `kubectl apply -f day4warmup.yml` again, and the pod should be created successfully.
 </details>
