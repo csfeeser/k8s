@@ -14,7 +14,21 @@ To get started, run the following command to set up the environment with the nec
 
 `student@bchd~$` `cd && wget https://raw.githubusercontent.com/csfeeser/k8s/master/resources/rolewarmupprep.sh -O - | bash`
 
-This script creates a namespace called `challenge`, a service account named `challenge-sa`, a Role called `challenge-role`, and a RoleBinding. The role currently only allows basic access (listing and viewing pods). 
+This script creates a namespace called `challenge`, a service account named `challenge-sa`, a Role called `challenge-role`, and a RoleBinding. The role currently only allows basic access (listing and viewing pods). Confirm all those resources were created.
+
+`student@bchd:~$` `kubectl get roles,rolebindings,serviceaccounts -n challenge`
+
+```
+NAME                                            CREATED AT
+role.rbac.authorization.k8s.io/challenge-role   2024-09-19T12:30:21Z
+
+NAME                                                          ROLE                  AGE
+rolebinding.rbac.authorization.k8s.io/challenge-rolebinding   Role/challenge-role   48s
+
+NAME                          SECRETS   AGE
+serviceaccount/challenge-sa   0         48s
+serviceaccount/default        0         48s
+```
 
 Now, it’s time to check the permissions granted to the service account.
 
