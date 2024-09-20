@@ -68,10 +68,9 @@ rules:
 
 You need to add more functionality to the role! Specifically, ensure that the service account can perform the following actions on pods:
 
-- **List** pods (already allowed)
+- **Get/List** pods (already allowed)
 - **Create** pods
 - **Delete** pods
-- **Describe** pods
 
 ### Step 4: Test Your Changes
 
@@ -83,8 +82,6 @@ Once you've updated the Role, apply the new manifest and test it by running the 
 
 `student@bchd~$` `kubectl auth can-i delete pod --as=system:serviceaccount:challenge:challenge-sa -n challenge`
 
-`student@bchd~$` `kubectl auth can-i describe pod --as=system:serviceaccount:challenge:challenge-sa -n challenge`
-
 All of these commands should return `yes` if you've updated the role correctly.
 
 ---
@@ -95,7 +92,7 @@ All of these commands should return `yes` if you've updated the role correctly.
   <summary>Need a few hints? Click here to reveal!</summary>
 
   - The Role only has permissions to get and list pods right now. What verbs could you add to grant more actions on pods?
-  - Fortunately, the verbs we need to enable the permissions described above are the same! `create`, `describe`, etc.
+  - Fortunately, the verbs we need to enable the permissions described above are the same! `create`, `delete`, etc.
 
 </details>
 
@@ -106,7 +103,7 @@ All of these commands should return `yes` if you've updated the role correctly.
 <details>
   <summary>Click here if you want the full solution!</summary>
 
-  - To grant the service account the ability to create, delete, and describe pods, you need to update the Role to include the `create`, `delete`, and `describe` verbs.
+  - To grant the service account the ability to create, delete, and describe pods, you need to update the Role to include the `create` and `delete` verbs.
   - The final Role should look something like this:
 
     ```yaml
@@ -118,7 +115,7 @@ All of these commands should return `yes` if you've updated the role correctly.
     rules:
     - apiGroups: [""]
       resources: ["pods"]
-      verbs: ["get", "list", "create", "delete", "describe"]
+      verbs: ["get", "list", "create", "delete"]
     ```
 
     Once this is applied, the service account will have the necessary permissions to manage pods in the `challenge` namespace.
