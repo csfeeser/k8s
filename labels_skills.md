@@ -21,7 +21,7 @@ This script will create 20 pods named after different animals, each with a mix o
 
 ### Task 1: Find All Pods with `species=mammal`
 
-Run the appropriate `kubectl` command to find all pods with the label `species: mammal`.
+Run the appropriate `kubectl` command to find all pods with the label `species: mammal` in the `critters` namespace.
 
 <details>
   <summary>Click here for the full solution!</summary>
@@ -42,7 +42,7 @@ kubectl get pods -n critters -l species=mammal
 
 ### Task 2: Find All Pods with Both `species=mammal` and `habitat=land`
 
-Now, filter the pods down even further. Find the pods that have **both** `species: mammal` and `habitat: land`.
+Now, filter the pods down even further. Find the pods that have **both** `species: mammal` and `habitat: land` in the `critters` namespace.
 
 <details>
   <summary>Click here for the full solution!</summary>
@@ -63,7 +63,7 @@ kubectl get pods -n critters -l species=mammal,habitat=land
 
 ### Task 3: Find All Pods with `diet=herbivore` or `diet=carnivore`
 
-Your final task is to find the pods that have **either** `diet: herbivore` or `diet: carnivore`.
+Your final task is to find the pods that have **either** `diet: herbivore` or `diet: carnivore` in the `critters` namespace.
 
 <details>
   <summary>Click here for the full solution!</summary>
