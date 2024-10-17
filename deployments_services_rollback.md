@@ -15,8 +15,6 @@ Run this command to create a deployment called **mufasa** in the namespace `king
 
 Apparently, the current version is broken. Check the deployment history and rollback to a version that actually works.
 
----
-
 <details>
   <summary>Hint for Task 1</summary>
 
@@ -39,8 +37,6 @@ kubectl rollout undo -n king-of-lions deployment mufasa
 ### TASK 2
 
 Increase the number of pods in the deployment **mufasa** in the namespace `king-of-lions` to 5.
-
----
 
 <details>
   <summary>Hint for Task 2</summary>
@@ -74,8 +70,6 @@ Change `2` to `5`, and save the changes.
 ### TASK 3
 
 Expose the deployment **mufasa** in the namespace `king-of-lions` with a service! You do not have to write a manifest to accomplish this.
-
----
 
 <details>
   <summary>Hint for Task 3</summary>
