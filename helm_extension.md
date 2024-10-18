@@ -12,6 +12,7 @@ We will create a Helm chart named `myapp` that deploys a simple Nginx web server
 
 This command will generate the basic directory structure for a Helm chart.
 
+```
 myapp/
 ├── charts/
 ├── templates/
@@ -25,6 +26,7 @@ myapp/
 │       └── test-connection.yaml
 ├── Chart.yaml
 └── values.yaml
+```
 
 #### Step 3: Modify `values.yaml`
 
