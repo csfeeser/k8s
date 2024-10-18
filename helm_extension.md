@@ -6,7 +6,7 @@ We will create a Helm chart named `myapp` that deploys a simple Nginx web server
 
 #### Step 1: Install Helm (if not installed)
 
-`student@bchd:~$` `curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`
+`student@bchd:~$` `sudo snap install helm --classic`
 
 #### Step 2: Create a new Helm chart
 
