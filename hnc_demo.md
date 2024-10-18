@@ -1,6 +1,7 @@
 # Hierarchical Namespaces Demo
 
-In this demo, we'll walk through the process of setting up **Hierarchical Namespaces** in Kubernetes, organizing namespaces into parent-child relationships, and applying **NetworkPolicies** across those namespaces. You'll learn how to:
+Let's see what it takes to set up **Hierarchical Namespaces** in Kubernetes, organizing namespaces into parent-child relationships, and applying **NetworkPolicies** across those namespaces. This is what we're going to accomplish in this demo:
+
 1. Install the **Hierarchical Namespace Controller (HNC)**.
 2. Create a parent namespace and child namespaces.
 3. Apply a **NetworkPolicy** in the parent namespace.
@@ -112,7 +113,7 @@ We will apply a NetworkPolicy in the `grandparent-ns` namespace and propagate it
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-from-ip-block
+  name: grandparent-netpol
   namespace: grandparent-ns
 spec:
   podSelector: {}
@@ -143,7 +144,7 @@ kubectl hns config set-resource networkpolicies --mode Propagate
 #### 6.2 Annotate the NetworkPolicy for Propagation:
 
 ```bash
-kubectl annotate networkpolicy allow-from-ip-block hnc.x-k8s.io/propagate=true -n grandparent-ns
+kubectl annotate networkpolicy grandparent-netpol hnc.x-k8s.io/propagate=true -n grandparent-ns
 ```
 
 ### **Step 7: Verify Propagation to Child Namespaces**
@@ -155,17 +156,4 @@ kubectl get networkpolicies -n parent-ns
 kubectl get networkpolicies -n child-ns
 ```
 
-If successful, the NetworkPolicy should be visible in both namespaces.
-
----
-
-### **Summary**
-
-In this demo, we:
-1. Installed the **Hierarchical Namespace Controller (HNC)**.
-2. Created a **parent-child hierarchy** of namespaces.
-3. Applied a **NetworkPolicy** in the parent namespace (`grandparent-ns`).
-4. Configured HNC to propagate the policy to child namespaces (`parent-ns` and `child-ns`).
-5. Verified that the **NetworkPolicy** was successfully propagated to the child namespaces.
-
-This setup helps you apply and manage network and security policies across multiple namespaces more easily.
+If successful, the NetworkPolicy should be visible in both namespaces!
