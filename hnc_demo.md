@@ -1,4 +1,4 @@
-### **Demo Preview:**
+# Hierarchical Namespaces Demo
 
 In this demo, we'll walk through the process of setting up **Hierarchical Namespaces** in Kubernetes, organizing namespaces into parent-child relationships, and applying **NetworkPolicies** across those namespaces. You'll learn how to:
 1. Install the **Hierarchical Namespace Controller (HNC)**.
@@ -12,7 +12,7 @@ In this demo, we'll walk through the process of setting up **Hierarchical Namesp
 First, install the **Hierarchical Namespace Controller** to manage parent-child relationships between namespaces:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/hierarchical-namespaces/main/manifests/hnc-manager.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/hierarchical-namespaces/releases/download/v1.1.0-rc2/default.yaml
 ```
 
 Verify that HNC is running:
@@ -64,56 +64,56 @@ kubectl hns
 #### 3.1 Create Parent Namespace:
 
 ```bash
-kubectl create namespace acme-org
+kubectl create namespace grandparent-ns
 ```
 
 #### 3.2 Create Child Namespaces:
 
 ```bash
-kubectl create namespace team-a
-kubectl create namespace service-1
+kubectl create namespace parent-ns
+kubectl create namespace child-ns
 ```
 
 ### **Step 4: Set Parent-Child Relationships**
 
-#### 4.1 Set `acme-org` as the Parent of `team-a`:
+#### 4.1 Set `grandparent-ns` as the Parent of `parent-ns`:
 
 ```bash
-kubectl hns set team-a --parent acme-org
+kubectl hns set parent-ns --parent grandparent-ns
 ```
 
-#### 4.2 Set `team-a` as the Parent of `service-1`:
+#### 4.2 Set `parent-ns` as the Parent of `child-ns`:
 
 ```bash
-kubectl hns set service-1 --parent team-a
+kubectl hns set child-ns --parent parent-ns
 ```
 
 Verify the hierarchy:
 
 ```bash
-kubectl hns tree acme-org
+kubectl hns tree grandparent-ns
 ```
 
 You should see:
 
 ```
-acme-org
-└── team-a
-    └── service-1
+grandparent-ns
+└── parent-ns
+    └── child-ns
 ```
 
 ### **Step 5: Apply NetworkPolicy in Parent Namespace**
 
-We will apply a NetworkPolicy in the `acme-org` namespace and propagate it to the child namespaces.
+We will apply a NetworkPolicy in the `grandparent-ns` namespace and propagate it to the child namespaces.
 
-#### 5.1 Create NetworkPolicy in `acme-org`:
+#### 5.1 Create NetworkPolicy in `grandparent-ns`:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: allow-from-ip-block
-  namespace: acme-org
+  namespace: grandparent-ns
 spec:
   podSelector: {}
   policyTypes:
@@ -143,16 +143,16 @@ kubectl hns config set-resource networkpolicies --mode Propagate
 #### 6.2 Annotate the NetworkPolicy for Propagation:
 
 ```bash
-kubectl annotate networkpolicy allow-from-ip-block hnc.x-k8s.io/propagate=true -n acme-org
+kubectl annotate networkpolicy allow-from-ip-block hnc.x-k8s.io/propagate=true -n grandparent-ns
 ```
 
 ### **Step 7: Verify Propagation to Child Namespaces**
 
-Check if the NetworkPolicy has been propagated to `team-a` and `service-1`:
+Check if the NetworkPolicy has been propagated to `parent-ns` and `child-ns`:
 
 ```bash
-kubectl get networkpolicies -n team-a
-kubectl get networkpolicies -n service-1
+kubectl get networkpolicies -n parent-ns
+kubectl get networkpolicies -n child-ns
 ```
 
 If successful, the NetworkPolicy should be visible in both namespaces.
@@ -164,8 +164,8 @@ If successful, the NetworkPolicy should be visible in both namespaces.
 In this demo, we:
 1. Installed the **Hierarchical Namespace Controller (HNC)**.
 2. Created a **parent-child hierarchy** of namespaces.
-3. Applied a **NetworkPolicy** in the parent namespace (`acme-org`).
-4. Configured HNC to propagate the policy to child namespaces (`team-a` and `service-1`).
+3. Applied a **NetworkPolicy** in the parent namespace (`grandparent-ns`).
+4. Configured HNC to propagate the policy to child namespaces (`parent-ns` and `child-ns`).
 5. Verified that the **NetworkPolicy** was successfully propagated to the child namespaces.
 
 This setup helps you apply and manage network and security policies across multiple namespaces more easily.
