@@ -127,7 +127,7 @@ This will create a `ClusterIP` service, exposing Nginx on port 80.
 
 We don't need the other templates, so let's delete them.
 
-`student@bchd:~$` `rm myapp/templates/hpa.yaml myapp/templates/hpa.yaml/ingress.yaml myapp/templates/hpa.yaml/serviceaccount.yaml`
+`student@bchd:~$` `rm ~/myapp/templates/hpa.yaml && rm ~/myapp/templates/ingress.yaml && rm ~/myapp/templates/serviceaccount.yaml`
 
 Now install the `myapp` chart in the Kubernetes cluster.
 
