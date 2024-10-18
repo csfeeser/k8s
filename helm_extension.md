@@ -211,12 +211,6 @@ myapp   default     3           2024-10-17 12:10:00.000000000 +0000 UTC deployed
 
 You should see the pods running the correct version of the image (`nginx:1.21.1`).
 
-### **Summary of Files**
+We're done, so you can have Helm tear everything down!
 
-- **values.yaml**: Defines the configuration for the chart (e.g., image, replica count).
-- **deployment.yaml**: Defines the Deployment resource template.
-- **service.yaml**: Defines the Service resource template.
-
-### **Final Thoughts**
-
-This demonstration shows how to create a custom Helm chart, install it, perform an upgrade, and roll back to a previous release. Helm makes Kubernetes application management easier by using these automated tools.
+`student@bchd:~$` `helm uninstall myapp`
