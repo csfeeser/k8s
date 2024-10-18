@@ -125,7 +125,7 @@ This will create a `ClusterIP` service, exposing Nginx on port 80.
 
 #### Step 6: Install the custom chart
 
-We don't need the other templates, so let's delete them.
+We don't need the other templates, so let's delete them. (Alternatively, we could tell Helm to ignore them in the `myapp/.helmignore` file)
 
 `student@bchd:~$` `rm ~/myapp/templates/hpa.yaml && rm ~/myapp/templates/ingress.yaml && rm ~/myapp/templates/serviceaccount.yaml`
 
