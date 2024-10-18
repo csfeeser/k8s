@@ -143,7 +143,7 @@ You should see the `myapp` release in the list.
 
 ```
 NAME    NAMESPACE   REVISION    UPDATED                                 STATUS      CHART        APP VERSION
-myapp   default     1           2024-10-17 12:00:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.21.1
+myapp   default     1           2024-10-17 12:00:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.16
 ```
 
 ### **2. Rolling Back to a Previous Helm Release**
@@ -183,7 +183,7 @@ You should see that the `REVISION` has incremented.
 
 ```
 NAME    NAMESPACE   REVISION    UPDATED                                 STATUS      CHART        APP VERSION
-myapp   default     2           2024-10-17 12:05:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.19.0
+myapp   default     2           2024-10-17 12:05:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.16
 ```
 
 #### Step 4: Roll back to the previous release
@@ -202,7 +202,7 @@ You should see that the `REVISION` has incremented again, but the `APP VERSION` 
 
 ```
 NAME    NAMESPACE   REVISION    UPDATED                                 STATUS      CHART        APP VERSION
-myapp   default     3           2024-10-17 12:10:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.21.1
+myapp   default     3           2024-10-17 12:10:00.000000000 +0000 UTC deployed    myapp-0.1.0  1.16
 ```
 
 #### Step 6: Confirm rollback was successful
