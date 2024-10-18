@@ -1,5 +1,7 @@
 # Creating, Updating, and Version Controlling Charts with Helm!
 
+<img src="https://media.makeameme.org/created/take-this-helmchart.jpg" alt="image" width="300"/>
+
 ### **1. Create a Custom Helm Chart**
 
 We will create a Helm chart named `myapp` that deploys a simple Nginx web server.
