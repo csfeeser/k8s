@@ -2,13 +2,13 @@
 
 ```mermaid
 graph LR
-    A(kubectl apply -f newpod.yml) --> B{"STOP! LimitRange check!\nGot requests/limits?"}
+    A(kubectl apply -f newpod.yml) --> B{"STOP! LimitRange check!Got requests/limits?"}
     
-    B -->|No| C(POD CHANGE: default limits applied) --> D{"LimitRange check again:\nAre limits acceptable?"}
+    B -->|No| C(POD CHANGE: default limits applied) --> D{"LimitRange check again: Are limits acceptable?"}
     B -->|Yes| D
     
     D -->|No| E(POD FAILS)
-    D -->|Yes| F{"ResourceQuota check:\nEnough namespace space?"}
+    D -->|Yes| F{"ResourceQuota check: Enough namespace space?"}
     
     F -->|No| E
     F -->|Yes| G(POD IS CREATED!)
