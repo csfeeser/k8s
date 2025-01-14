@@ -29,7 +29,7 @@
 
 3. Confirm that your pod is working. The status must say `RUNNING` for you to declare victory! (if it is in a `ContainerCreating` state try again in a few seconds)
 
-    `student@bchd~$` `kubectl get pod warmup-up`
+    `student@bchd~$` `kubectl get pod warmup-pod`
 
 <details>
 <summary>Click here for hints!</summary>
