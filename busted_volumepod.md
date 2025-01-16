@@ -22,7 +22,9 @@ kubectl create configmap nginx-conf --from-file=nginx.conf
 kubectl create configmap index-file --from-file=index.html
 ```
 
-Do your best to find and fix all the errors before creating this Pod! You cannot claim success until the *STATUS* of the container says *Running*!
+Create your pod manifest from the file below. Do your best to find and fix all the errors before creating this Pod! You cannot claim success until the *STATUS* of the container says *Running*!
+
+`student@bchd:~$` `vim day4warmup.yml`
 
 ```yaml
 ---
