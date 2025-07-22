@@ -1,6 +1,6 @@
 # Busted Pod Challenge!
 
-<img src="https://thumbs.dreamstime.com/b/green-pea-pod-broken-half-fresh-four-peas-pure-white-background-genus-pisum-sativum-garden-48834097.jpg" width="200"/>
+<img src="https://thumbs.dreamstime.com/b/green-pea-pod-broken-half-fresh-four-peas-pure-white-background-genus-pisum-sativum-garden-48834097.jpg" width="300"/>
 
 > It's a "broken pod"... get it?
 
@@ -24,7 +24,7 @@ kubectl create configmap index-file --from-file=index.html
 
 Create your pod manifest from the file below. Do your best to find and fix all the errors before creating this Pod! You cannot claim success until the *STATUS* of the container says *Running*!
 
-`student@bchd:~$` `vim day4warmup.yml`
+`student@bchd:~$` `vim troubleshooting-warmup.yml`
 
 ```yaml
 ---
