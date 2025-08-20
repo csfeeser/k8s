@@ -2,6 +2,13 @@
 
 <img src="https://miro.medium.com/v2/resize:fit:800/0*0tk3EgSA2cJI3oPg.jpg" alt="Description of the image">
 
+## IMPORTANT
+
+You'll need to switch to your Kubernetes VM to complete this warmup. Here's a reminder of what to do:
+
+<img width="821" height="462" alt="thing" src="https://github.com/user-attachments/assets/4cd1c6db-0704-4505-a23b-aa3f2ad00f1e" />
+
+
 1. Create a pod!
 
     `student@bchd~$` `vim bustedpodwarmup.yml`
